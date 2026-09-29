@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
+<title>Kotoba Minna no Nihongo II</title>
+<style>
+:root{--bg:#f3eee4;--bg2:#ebe4d6;--card:#fffefa;--ink:#2b3345;--mute:#7c8090;--line:#e4dccb;--acc:#3f5f8a;--acc2:#5b7fae;--accS:#e3ebf5;--sak:#f2c4cc;--sakS:#fbeaed;--ok:#4f8a6b;--okS:#e0f0e6;--bad:#c9605a;--badS:#fae3e0;--btnT:#fff;--sh:0 6px 20px rgba(63,95,138,.10);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161a24;--bg2:#1c2130;--card:#212736;--ink:#e7e5df;--mute:#9297a8;--line:#2f3648;--acc:#8fb1e0;--acc2:#a9c4ea;--accS:#28344d;--sak:#e7a9b5;--sakS:#3a2b35;--ok:#86c7a4;--okS:#243a30;--bad:#ee948d;--badS:#412b2b;--btnT:#141a28;--sh:0 6px 20px rgba(0,0,0,.3)}}
+:root[data-theme="dark"]{--bg:#161a24;--bg2:#1c2130;--card:#212736;--ink:#e7e5df;--mute:#9297a8;--line:#2f3648;--acc:#8fb1e0;--acc2:#a9c4ea;--accS:#28344d;--sak:#e7a9b5;--sakS:#3a2b35;--ok:#86c7a4;--okS:#243a30;--bad:#ee948d;--badS:#412b2b;--btnT:#141a28;--sh:0 6px 20px rgba(0,0,0,.3)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;color:var(--ink);font:16px/1.6 "Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic",system-ui,sans-serif;background:radial-gradient(circle at 12% -5%,var(--sakS),transparent 45%),radial-gradient(circle at 100% 10%,var(--accS),transparent 40%),var(--bg);background-attachment:fixed;min-height:100vh}
+main{max-width:580px;margin:0 auto;padding:14px 16px 48px}
+.hero{position:relative;overflow:hidden;border-radius:26px;padding:26px 24px 24px;margin:6px 0 18px;color:#fff;background:linear-gradient(135deg,#34507a,#5b7fae 70%,#7d9fc9);box-shadow:var(--sh)}
+.hero:after{content:"言葉";position:absolute;right:-6px;bottom:-30px;font-size:8rem;font-weight:700;opacity:.13;line-height:1}
+.hero small{display:inline-block;background:rgba(255,255,255,.18);border-radius:999px;padding:2px 12px;font-size:.78rem;letter-spacing:.05em}
+.hero h1{font-size:1.65rem;margin:10px 0 4px;line-height:1.25;font-weight:700}
+.hero p{margin:0;opacity:.9;font-size:.92rem;max-width:80%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;margin-bottom:14px;box-shadow:var(--sh)}
+h2{font-size:.85rem;letter-spacing:.04em;color:var(--acc);margin:0 0 12px;font-weight:700;display:flex;align-items:center;gap:8px}
+h2:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sak)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:14px;padding:8px 16px;font:inherit;font-weight:500;cursor:pointer;transition:.15s}
+.chip:hover{border-color:var(--acc2)}
+.chip.on{background:var(--acc);border-color:var(--acc);color:var(--btnT)}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mode{text-align:left;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:16px;padding:12px 14px;font:inherit;font-weight:700;cursor:pointer;transition:.15s;line-height:1.35}
+.mode small{display:block;color:var(--mute);font-size:.76rem;font-weight:400;margin-top:3px}
+.mode:hover{border-color:var(--acc2)}
+.mode.on{background:var(--accS);border-color:var(--acc)}
+.btn{width:100%;border:0;border-radius:16px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:var(--btnT);font:inherit;font-weight:700;font-size:1.02rem;padding:15px;cursor:pointer;margin-top:8px;box-shadow:var(--sh);transition:transform .15s}
+.btn:hover:not(:disabled){transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+.btn:disabled{opacity:.4;cursor:default}
+.bar{height:10px;background:var(--bg2);border-radius:9px;overflow:hidden;margin:4px 0 8px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--sak),var(--acc2));border-radius:9px;transition:width .35s}
+.meta{display:flex;justify-content:space-between;color:var(--mute);font-size:.82rem;margin-bottom:14px}
+.q{text-align:center;padding:22px 12px;margin:-4px -4px 16px;border-radius:18px;background:var(--accS);animation:in .35s ease}
+.q .lab{color:var(--acc);font-size:.82rem;font-weight:700;margin-bottom:6px}
+.q .big{font-size:2.6rem;line-height:1.9;font-weight:500}
+.q .mean{font-size:1.55rem;font-weight:700}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+ruby rt{font-size:.48em;color:var(--mute);font-weight:400}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:10px 14px;font:inherit;font-size:1.1rem;cursor:pointer;min-height:58px;display:flex;align-items:center;gap:14px;transition:.15s}
+.opt b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--bg2);color:var(--mute);font-weight:700;font-size:.85rem;display:grid;place-items:center}
+.opt:hover:not(:disabled){border-color:var(--acc2);transform:translateX(2px)}
+.opt.ok{background:var(--okS);border-color:var(--ok)}.opt.ok b{background:var(--ok);color:#fff}
+.opt.no{background:var(--badS);border-color:var(--bad)}.opt.no b{background:var(--bad);color:#fff}
+.opt:disabled{cursor:default}
+.fb{margin-top:14px;padding:12px 14px;border-radius:14px;font-size:.95rem;animation:in .3s ease}
+.fb.ok{background:var(--okS)}.fb.no{background:var(--badS)}
+.score{text-align:center;padding:10px 0}
+.score .n{font-size:4.2rem;font-weight:700;line-height:1.1;background:linear-gradient(135deg,var(--acc),var(--bad));-webkit-background-clip:text;background-clip:text;color:transparent}
+.donut{position:relative;width:200px;height:200px;margin:0 auto 6px}.donut svg{width:100%;height:100%;display:block}.donut .n{position:absolute;inset:0;display:grid;place-items:center;font-size:2.6rem}
+.score p{color:var(--mute);margin:6px 0 0}
+.wl{list-style:none;margin:0;padding:0}
+.wl li{padding:10px 0;border-top:1px dashed var(--line);display:flex;justify-content:space-between;gap:12px}
+.wl li span:last-child{color:var(--mute);text-align:right}
+.top{display:flex;justify-content:flex-end}
+.tg{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 14px;color:var(--mute);cursor:pointer;font:inherit;font-size:.8rem}
+.back{margin-bottom:12px}
+.rr{display:flex;align-items:center;gap:10px;margin-top:14px;color:var(--mute);font-size:.9rem}
+.rr input{width:76px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:8px 10px;font:inherit;text-align:center}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:10px}.sg div{background:var(--accS);border-radius:16px;padding:14px 8px;text-align:center}
+.sg b{display:block;font-size:1.7rem;line-height:1.2}.sg span{color:var(--mute);font-size:.78rem}
+.sb{margin:10px 0}.sb .t{display:flex;justify-content:space-between;font-size:.9rem}.sb .bar{height:8px;margin:4px 0 0}
+.hide{display:none}
+@media(max-width:440px){.modes{grid-template-columns:1fr}.hero p{max-width:100%}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<div class="top"><button class="tg" id="tg">◐ Tema</button></div>
+
+<section id="setup">
+ <div class="hero"><small>みんなの日本語 II</small><h1>Latihan Kotoba</h1><p>Pilihan ganda kosakata per bab. Kata yang salah akan muncul lagi sampai kamu hafal.</p></div>
+ <div class="card"><h2>Pilih bab</h2><div class="chips" id="chips"></div></div>
+ <div class="card"><h2>Rentang nomor kata</h2><div class="chips" id="rchips"></div>
+  <div class="rr">Dari <input type="number" id="rf" min="1" inputmode="numeric"> sampai <input type="number" id="rt" min="1" inputmode="numeric"></div><p class="sub" id="rinfo" style="margin:8px 0 0;font-size:.82rem"></p></div>
+ <div class="card"><h2>Mode latihan</h2><div class="modes" id="modes"></div></div>
+ <button class="btn" id="start">Mulai</button>
+ <button class="btn ghost" id="gostat">📊 Statistik</button>
+</section>
+
+<section id="quiz" class="hide">
+ <button class="tg back" id="back">← Kembali ke menu</button>
+ <div class="bar"><i id="pb" style="width:0"></i></div>
+ <div class="meta"><span id="pt"></span><span id="pk"></span></div>
+ <div class="card">
+  <div class="q" id="q"></div>
+  <div class="opts" id="opts"></div>
+  <div id="fb"></div>
+  <button class="btn hide" id="next">Lanjut</button>
+ </div>
+</section>
+
+<section id="result" class="hide"></section>
+<section id="stats" class="hide"><button class="tg back" id="stback">← Kembali ke menu</button><div class="hero" style="padding:20px 22px"><h1 style="margin:0">Statistik</h1><p>Perkembangan belajarmu, tersimpan di browser ini.</p></div><div id="stbody"></div></section>
+</main>
+
+<script>
+// bab | kana | kanji (kosong jika tanpa kanji) | arti
+const D=`26|みます||melihat, memeriksa
+26|さがします|探します|mencari
+26|おくれます|遅れます|terlambat [pada waktu]
+26|まにあいます|間に合います|sempat [pada waktu]
+26|やります||melakukan
+26|ひろいます|拾います|mendapat, mengambil
+26|れんらくします|連絡します|menghubungi
+26|きぶんが いい|気分が いい|rasa enak, segar
+26|きぶんが わるい|気分が 悪い|rasa tidak enak
+26|うんどうかい|運動会|lomba olahraga
+26|ぼんおどり|盆踊り|tarian Bon
+26|フリーマーケット||pasar rombengan
+26|ばしょ|場所|tempat
+26|ボランティア||sukarelawan
+26|さいふ|財布|dompet
+26|ごみ||sampah
+26|こっかいぎじどう|国会議事堂|gedung parlemen
+26|へいじつ|平日|hari kerja
+26|~べん|~弁|dialek ~
+26|こんど|今度|kali ini, lain kali
+26|ずいぶん||sangat, amat
+26|ちょくせつ|直接|langsung
+26|いつでも||kapan saja
+26|どこでも||di mana-mana
+26|だれでも||siapa saja
+26|なんでも|何でも|apa saja
+26|こんな~||begini
+26|そんな~||begitu (dekat lawan bicara)
+26|あんな~||begitu (jauh dari pembicara dan lawan bicara)
+26|エドヤストア||toko fiksi
+26|かたづきます|片づきます|membereskan [barang]
+26|だします|出します|membuang [sampah], mengeluarkan
+26|もえるごみ|燃える ごみ|sampah organik
+26|おきば|置き場|tempat meletakkan sampah
+26|よこ|横|sebelah, samping
+26|びん|瓶|botol
+26|かん|缶|kaleng
+26|ガス||gas
+26|~がいしゃ|~会社|perusahaan ~
+26|うちゅう|宇宙|angkasa
+26|~さま|~様|kepada Yth. ~, Bapak ~, Ibu ~, Sdr. ~ (kata hormat dari ~さん)
+26|うちゅうせん|宇宙船|wahana antariksa
+26|こわい|怖い|takut
+26|うちゅうステーション|宇宙ステーション|stasiun luar angkasa
+26|ちがいます|違います|tidak benar
+26|うちゅうひこうし|宇宙飛行士|astronot
+26|ほしであきひこ|星出彰彦|astronot Jepang (1968-)
+26|ごみのだしかた|ごみの出し方|cara membuang sampah
+26|しゅうしゅうび|収集日|hari pengumpulan
+26|ごみしゅうしゅうびのおしらせ|ごみ収集日の お知らせ|pengumuman hari pengumpulan sampah
+26|かねんごみ|可燃ごみ|sampah organik (= 燃える ごみ)
+26|なまごみ|生ごみ|sampah dapur/sampah basah
+26|かみくず|紙くず|kertas bekas
+26|ふねんごみ(もえないごみ)|不燃ごみ (燃えない ごみ)|sampah anorganik/sampah kering
+26|ガラスせいひん|ガラス製品|produk dari kaca
+26|せともの|瀬戸物|keramik
+26|きんぞくせいだいどころようひん|金属製台所用品|peralatan dapur dari logam
+26|しげんごみ|資源ごみ|sampah yang dapat didaur ulang
+26|ペットボトル||botol plastik
+26|そだいごみ|粗大ごみ|sampah ukuran besar
+26|じぜんもうしこみ|事前申し込み|pendaftaran sebelumnya
+26|かぐ|家具|perabot rumah tangga
+26|じてんしゃ|自転車|sepeda
+27|かいます|飼います|memelihara
+27|はしります|走ります|berlari [jalan]
+27|みえます|見えます|terlihat [gunung]
+27|きこえます|聞こえます|terdengar [bunyi]
+27|できます||dibuat [jalan]
+27|ひらきます|開きます|membuka / mengadakan [kelas]
+27|しんぱい|心配|khawatir
+27|ペット||hewan peliharaan
+27|とり|鳥|burung
+27|こえ|声|suara
+27|なみ|波|ombak, gelombang
+27|はなび|花火|kembang api
+27|どうぐ|道具|alat
+27|クリーニング||laundry
+27|いえ|家|rumah
+27|マンション||apartemen
+27|キッチン||dapur
+27|~きょうしつ|~教室|les ~, kelas ~
+27|パーティールーム||ruang pesta
+27|かた|方|orang (hormat dari ひと)
+27|~ご|~後|setelah ~, sesudah ~
+27|~しか||hanya ~ (dipakai bersama dengan kata bentuk negatif)
+27|ほかの||lain
+27|はっきり||jelas
+27|かぐ|家具|perabot rumah, mebel
+27|ほんだな|本棚|lemari buku
+27|いつか||kapan-kapan
+27|たてます|建てます|membangun
+27|すばらしい||bagus
+27|こどもたち|子どもたち|anak-anak
+27|だいすき|大好き|kesukaan
+27|しゅじんこう|主人公|pelaku utama
+27|かたち|形|sosok, bentuk
+27|ふしぎ|不思議|ajaib
+27|ポケット||kantong
+27|たとえば|例えば|misalnya
+27|つけます|付けます|memasang
+27|じゆうに|自由に|dengan bebas
+27|そら|空|langit
+27|とびます|飛びます|terbang
+27|むかし|昔|dulu
+27|じぶん|自分|diri sendiri
+27|しょうらい|将来|masa depan
+27|ドラえもん||nama peran komik
+27|ちかくのみせ|近くの店|toko di sekitar lingkungan
+27|くつ・かばんしゅうり|靴・かばん修理|perbaikan sepatu・tas
+27|あいかぎ|合いかぎ|kunci cadangan
+27|ヒール・かかとしゅうり|ヒール・かかと修理|perbaikan hak・sol
+27|つまさきしゅうり|つま先修理|perbaikan ujung sepatu
+27|なかじきこうかん|中敷き交換|ganti pengalas dalam
+27|ファスナーこうかん|ファスナー交換|ganti ritsleting
+27|ハンドル・もちてこうかん|ハンドル・持ち手交換|ganti setir・pegangan
+27|ほつれ・ぬいめのしゅうり|ほつれ・縫い目の修理|perbaikan jahitan lepas・mata jahitan
+27|クリーニングや|クリーニング屋|laundry
+27|ドライクリーニング||dry cleaning/mencuci tanpa air
+27|みずあらい|水洗い|mencuci dengan air
+27|しみぬき|染み抜き|menghilangkan noda bintik
+27|はっすいかこう|はっ水加工|pengolahan anti air
+27|サイズなおし|サイズ直し|permak ukuran
+27|ちぢむ|縮む|menyusut
+27|のびる|伸びる|molor
+27|コンビニ||toko 24 jam
+27|たくはいびんのうけつけ|宅配便の受け付け|jasa penerimaan titipan kilat
+27|ATM||ATM
+27|こうきょうりょうきんとうのしはらい|公共料金等の支払い|pembayaran rekening listrik, air PAM dan lain-lain
+27|コピー、ファクス||fotokopi, fax
+27|はがき・きってのはんばい|はがき・切手の販売|penjualan kartu pos, perangko
+27|コンサートチケットの販売||penjualan karcis konser
+28|うれます|売れます|[roti] terjual
+28|おどります|踊ります|menari
+28|かみます||makan, menggigit
+28|えらびます|選びます|memilih
+28|かよいます|通います|pergi [ke universitas]
+28|メモします||mencatat
+28|まじめ||serius
+28|ねっしん|熱心|tekun
+28|えらい|偉い|hebat
+28|ちょうどいい||pas, cocok
+28|けしき|景色|pemandangan
+28|びよういん|美容院|salon kecantikan
+28|だいどころ|台所|dapur
+28|けいけん|経験|pengalaman (~が あります: berpengalaman, ~を します: mengalami)
+28|ちから|力|tenaga
+28|にんき|人気|populer/disenangi ([がくせいに] ~が あ ります: populer [di kalangan mahasiswa])
+28|かたち|形|bentuk, sosok
+28|いろ|色|warna
+28|あじ|味|rasa
+28|ガム||permen karet
+28|しなもの|品物|barang
+28|ねだん|値段|harga
+28|きゅうりょう|給料|gaji
+28|ボーナス||bonus
+28|ゲーム||permainan, game
+28|ばんぐみ|番組|acara TV
+28|ドラマ||drama
+28|かしゅ|歌手|penyanyi
+28|しょうせつ|小説|novel
+28|しょうせつか|小説家|novelis
+28|~か|~家|aliran ~
+28|~き|~機|mesin ~
+28|むすこ|息子|anak laki-laki
+28|むすこさん|息子さん|putra
+28|むすめ|娘|anak perempuan
+28|むすめさん|娘さん|putri
+28|じぶん|自分|diri sendiri
+28|しょうらい|将来|masa depan
+28|しばらく||sebentar, sementara
+28|たいてい||kebanyakan
+28|それに||dan juga
+28|それで||dan, lalu
+28|[ちょっと]おねがいがあるんですが。|[ちょっと] お願いが あるんですが。|Minta sesuatu [sebentar].
+28|じつは|実は|solanya/sebenarnya
+28|かいわ|会話|percakapan
+28|うーん||mmm…
+28|おしらせ|お知らせ|pemberitahuan, pengumuman
+28|さんかします|参加します|mengikuti
+28|ひにち|日にち|tanggal
+28|ど|土|hari Sabtu
+28|たいいくかん|体育館|gedung olahraga
+28|むりょう|無料|gratis, cuma-cuma
+28|さそいます|誘います|mengajak
+28|イベント||acara
+29|あきます|開きます|[pintu] terbuka
+29|しまります|閉まります|[pintu] tertutup
+29|つきます|つきます|[lampu] menyala
+29|きえます|消えます|[lampu] terpadam
+29|こわれます|壊れます|[kursi] rusak
+29|われます|割れます|[gelas] pecah
+29|おれます|折れます|[pohon] patah
+29|やぶれます|破れます|[kertas] robek
+29|よごれます|汚れます|[baju] menjadi kotor
+29|つきます|付きます|[kantong] terpasang
+29|はずれます|外れます|[kancing] terlepas
+29|とまります|止まります|[mobil] berhenti
+29|まちがえます||bersalah
+29|おとします|落とします|menjatuhkan, kehilangan
+29|かかります|掛かります|terkunci
+29|ふきます||mengelap
+29|とりかえます|取り替えます|mengganti
+29|かたづけます|片づけます|membereskan
+29|[お]さら|[お]皿|piring
+29|[お]ちゃわん||mangkuk
+29|コップ||gelas
+29|ガラス||kaca
+29|ふくろ|袋|kantong
+29|しょるい|書類|dokumen
+29|えだ|枝|ranting
+29|えきいん|駅員|petugas stasiun
+29|こうばん|交番|pos polisi
+29|スピーチ||pidato
+29|へんじ|返事|jawaban
+29|おさきにどうぞ|お先にどうぞ|Silakan duluan!
+29|げんじものがたり|源氏物語|Genji Monogatari (novel yang disusun oleh Murasaki Shikibu pada zaman Heian)
+29|いまのでんしゃ|今の電車|kereta tadi
+29|わすれもの|忘れ物|barang yang tertinggal
+29|このくらい||segini
+29|~がわ|~側|sebelah ~
+29|ポケット||kantong
+29|~へん|~辺|sekitar ~
+29|おぼえていません。|覚えて いません。|Tidak ingat.
+29|あみだな|網棚|rak bagasi
+29|たしか|確か|kalau tidak salah
+29|[ああ,]よかった。||[O,] syukur. (dipakai ketika merasa lega)
+29|しんじゅく|新宿|stasiun di Tokyo/nama daerah
+29|じしん|地震|gempa bumi
+29|かべ|壁|dinding
+29|はり|針|jarum
+29|さします|指します|menunjuk
+29|えきまえ|駅前|depan stasiun
+29|たおれます|倒れます|jatuh
+29|にし|西|barat
+29|~のほう|~の方|sebelah ~
+29|もえます|燃えます|terbakar
+29|レポーター||wartawan, jurnalis, pelapor
+29|じょうたい|状態|keadaan
+29|ようす|様子|kondisi, suasana
+29|ふとっている|太っている|gemuk
+29|やせている||kurus
+29|ふくらんでいる|膨らんでいる|kembung
+29|あながあいている|穴が開いている|bolong
+29|まがっている|曲がっている|bengkok
+29|ゆがんでいる||melengkung
+29|へこんでいる||penyok
+29|ねじれている||terpelintir
+29|かけている|欠けている|sumbing
+29|ひびがはいっている|ひびが入っている|retak
+29|くさっている|腐っている|busuk
+29|かわいている|乾いている|kering
+29|ぬれている||basah
+29|こおっている|凍っている|beku
+30|はります||menempelkan
+30|かけます|掛けます|menggantungkan
+30|かざります|飾ります|menghiasi
+30|ならべます|並べます|menata
+30|うえます|植えます|menanam
+30|もどします|戻します|mengembalikan
+30|まとめます||merangkumkan
+30|しまいます||menyimpan
+30|きめます|決めます|menentukan
+30|よしゅうします|予習します|belajar persiapan
+30|ふくしゅうします|復習します|belajar pengulangan
+30|そのままにします||membiarkan begitu
+30|じゅぎょう|授業|kelas, pelajaran
+30|こうぎ|講義|kuliah
+30|ミーティング||rapat
+30|よてい|予定|acara
+30|おしらせ|お知らせ|pengumuman
+30|ガイドブック||buku petunjuk
+30|カレンダー||kalender
+30|ポスター||plakat, poster
+30|よていひょう|予定表|jadwal acara
+30|ごみばこ|ごみ箱|tempat sampah, tong sampah
+30|にんぎょう|人形|boneka, orang-orangan
+30|かびん|花瓶|vas
+30|かがみ|鏡|cermin
+30|ひきだし|引き出し|laci
+30|げんかん|玄関|ruang depan
+30|ろうか|廊下|koridor, gang
+30|かべ|壁|dinding
+30|いけ|池|kolam
+30|もとのところ|元の所|tempat semula
+30|まわり|周り|sekitar
+30|まんなか|真ん中|tengah
+30|すみ|隅|pojok, sudut
+30|まだ||masih
+30|リュック||ransel
+30|ひじょうぶくろ|非常袋|kantong darurat
+30|ひじょうじ|非常時|saat darurat
+30|せいかつします|生活します|hidup
+30|かいちゅうでんとう|懐中電灯|senter
+30|~とか、~とか||~ atau ~
+30|まるい|丸い|bundar, bulat
+30|ある~||suatu ~
+30|ゆめをみます|夢を見ます|bermimpi
+30|うれしい||senang
+30|いや[な]|嫌[な]|tidak senang, tidak suka
+30|すると||kemudian
+30|めがさめます|目が覚めます|bangun, sadar
+30|ひじょうのばあい|非常の場合|apabila saat darurat
+30|じしんのばあい|地震の場合|apabila saat gempa bumi
+30|そなえがたいせつ|備えが大切|yang penting adalah persiapan
+30|かぐがたおれないようにしておく|家具が倒れないようにしておく|mencegah kerobohan perabotan rumah
+30|しょうかきをそなえる|消火器を備える|menyiapkan alat pemadam kebakaran
+30|みずをたくわえておく|水を貯えておく|menyiapkan air
+30|ひじょうぶくろをよういしておく|非常袋を用意しておく|menyiapkan kantong darurat
+30|ちいきのひなんばしょをかくにんしておく|地域の避難場所を確認しておく|mengecek tempat pengungsian di daerah masing-masing
+30|れんらくさき|連絡先|alamat kontak
+30|まんいちじしんがおきたばあい|万一地震が起きた場合|apabila terjadi gempa bumi
+30|じょうぶなテーブルのしたにもぐる|丈夫なテーブルの下にもぐる|berlindung di bawah meja yang kuat
+30|おちついてひのしまつ|落ち着いて火の始末|mematikan api dengan tenang
+30|とをあけてでぐちのかくほ|戸を開けて出口の確保|membuka pintu demi memastikan keselamatan
+30|あわててそとにとびださない|慌てて外に飛び出さない|tidak keluar dengan tergesa-gesa
+30|じしんがおさまったら|地震が収まったら|apabila gempa bumi berhenti
+30|ただしいじょうほうをきく|正しい情報を聞く|mendengarkan informasi yang tepat
+30|やまくずれ|山崩れ|gunung longsor
+30|がけくずれ|崖崩れ|tebing longsor
+30|つなみ|津波|tsunami
+30|ひなんする|避難する|mengungsi
+30|くるまをつかわず、かならずあるいて|車を使わず、必ず歩いて|tidak memakai mobil, tetapi berjalan kaki
+30|たいふうのばあい|台風の場合|apabila angin topan
+30|きしょうじょうほうをきく|気象情報を聞く|mendengarkan informasi cuaca
+30|いえのまわりのてんけん|家の周りの点検|pengecekan sekitar rumah
+30|ラジオのでんちのそなえを|ラジオの電池の備えを|mempersiapkan baterai radio
+30|みず、きんきゅうしょくひんのじゅんび|水、緊急食品の準備|persiapan air dan makanan untuk saat darurat
+30|きちょうひん|貴重品|barang berharga
+30|きゅうきゅうやくひん|救急薬品|obat-obatan darurat
+30|ラジオ||radio
+30|でんち|電池|baterai
+31|つづけます|続けます|melanjutkan
+31|みつけます|見つけます|menemukan
+31|とります|取ります|mengambil [cuti]
+31|うけます|受けます|mengikuti [ujian]
+31|もうしこみます|申し込みます|mendaftar
+31|きゅうけいします|休憩します|beristirahat
+31|れんきゅう|連休|liburan berturutan
+31|さくぶん|作文|karangan
+31|はっぴょう|発表|presentasi
+31|てんらんかい|展覧会|pameran
+31|けっこんしき|結婚式|upacara pernikahan
+31|[お]そうしき|[お]葬式|upacara kematian
+31|しき|式|upacara
+31|ほんしゃ|本社|kantor pusat
+31|してん|支店|kantor cabang
+31|きょうかい|教会|gereja
+31|だいがくいん|大学院|Program S2, S3 Universitas
+31|どうぶつえん|動物園|kebun binatang
+31|おんせん|温泉|tempat pemandian air panas
+31|かえり|帰り|pulang
+31|おこさん|お子さん|anak orang lain
+31|~ごう|~号|nomor ~
+31|~のほう|~の方|sebelah ~
+31|ずっと||seterusnya
+31|バリ||Bali (pulau di Indonesia)
+31|ピカソ||Pablo Picasso, pelukis Spanyol (1881-1973)
+31|のぞみ||nama Shinkansen, (~42号: Nozomi No.42)
+31|しんこうべ|新神戸|nama stasiun yang ada di Hyogo prefektur
+31|のこります|残ります|tinggal
+31|にゅうがくしけん|入学試験|ujian masuk
+31|つきに|月に|dalam sebulan
+31|むら|村|desa, kampung
+31|そつぎょうします|卒業します|lulus, tamat
+31|えいがかん|映画館|gedung bioskop
+31|いや|嫌|tidak senang, tidak suka
+31|そら|空|langit
+31|とじます|閉じます|tutup
+31|とかい|都会|kota besar
+31|こどもたち|子どもたち|anak-anak
+31|じゆうに|自由に|dengan bebas
+31|せんもん|専門|bidang keilmuan
+31|いがく|医学|ilmu kedokteran
+31|やくがく|薬学|ilmu farmasi
+31|かがく|化学|ilmu kimia
+31|せいかがく|生化学|ilmu biokimia
+31|せいぶつがく|生物学|ilmu biologi
+31|のうがく|農学|ilmu pertanian
+31|ちがく|地学|ilmu geologi
+31|ちりがく|地理学|ilmu geografi
+31|すうがく|数学|ilmu matematika
+31|ぶつりがく|物理学|ilmu fisika
+31|こうがく|工学|ilmu teknik
+31|どぼくこうがく|土木工学|ilmu teknik sipil
+31|でんしこうがく|電子工学|ilmu teknik elektronik
+31|でんきこうがく|電気工学|ilmu teknik listrik
+31|きかいこうがく|機械工学|ilmu teknik mesin
+31|コンピューターこうがく|コンピューター工学|ilmu informatika
+31|いでんしこうがく|遺伝子工学|ilmu genetika
+31|けんちくがく|建築学|ilmu arsitektur
+31|てんもんがく|天文学|ilmu astronomi
+31|かんきょうかがく|環境科学|ilmu tata lingkungan
+31|せいじがく|政治学|ilmu politik
+31|こくさいかんけいがく|国際関係学|ilmu hubungan internasional
+31|ほうりつがく|法律学|ilmu hukum
+31|けいざいがく|経済学|ilmu ekonomi
+31|けいえいがく|経営学|ilmu manajemen bisnis
+31|しゃかいがく|社会学|ilmu sosial
+31|きょういくがく|教育学|ilmu pendidikan
+31|ぶんがく|文学|ilmu sastra
+31|げんごがく|言語学|ilmu linguistik
+31|しんりがく|心理学|ilmu psikologi
+31|てつがく|哲学|ilmu filsafat
+31|しゅうきょうがく|宗教学|ilmu teologi
+31|げいじゅつ|芸術|ilmu seni
+31|びじゅつ|美術|ilmu seni murni
+31|おんがく|音楽|ilmu seni musik
+31|たいいくがく|体育学|ilmu pendidikan jasmani
+32|うんどうします|運動します|berolahraga
+32|せいこうします|成功します|berhasil
+32|しっぱいします|失敗します|gagal [ujian]
+32|ごうかくします|合格します|lulus [ujian]
+32|やみます||[hujan] berhenti
+32|はれます|晴れます|cerah
+32|くもります|曇ります|mendung
+32|つづきます|続きます|[demam] berlangsung
+32|ひきます||masuk [angin]
+32|ひやします|冷やします|mendinginkan
+32|こみます|込みます|[jalan] macet
+32|すきます||[jalan] sepi
+32|でます|出ます|mengikutsertakan [pertandingan]
+32|でます|出ます|menghadiri [pesta]
+32|むりをします|無理をします|memaksakan diri
+32|じゅうぶん|十分|dengan cukup
+32|おかしい||aneh, menarik
+32|うるさい||bising
+32|せんせい|先生|dokter
+32|やけど||luka bakar
+32|けが||luka
+32|せき||batuk
+32|インフルエンザ||influenza
+32|そら|空|langit
+32|たいよう|太陽|matahari
+32|ほし|星|bintang
+32|かぜ|風|angin
+32|ひがし|東|timur
+32|にし|西|barat
+32|みなみ|南|selatan
+32|きた|北|utara
+32|こくさい~|国際~|internasional ~
+32|すいどう|水道|air PAM
+32|エンジン||mesin
+32|チーム||regu
+32|こんや|今夜|nanti malam, malam ini
+32|ゆうがた|夕方|sore
+32|まえ||sebelum
+32|おそく|遅く|kemalaman
+32|こんなに||begini
+32|そんなに||begitu (hal tentang lawan bicara)
+32|あんなに||begitu (tidak berhubungan dengan pembicara dan lawan bicara)
+32|ヨーロッパ||Eropa
+32|げんき|元気|sehat
+32|い|胃|lambung
+32|ストレス||stres
+32|それはいけませんね。||Kurang bagus.
+32|ほしうらない|星占い|horoskop
+32|おうしざ|牡牛座|Taurus
+32|はたらきすぎ|働きすぎ|terlalu banyak pekerjaan
+32|こまります|困ります|bingung
+32|たからくじ|宝くじ|lotre
+32|あたります|当たります|memenangi [lotre]
+32|けんこう|健康|kesehatan
+32|れんあい|恋愛|asmara
+32|こいびと|恋人|pacar
+32|ラッキーアイテム||benda yang mujur
+32|いし|石|batu
+32|てんきよほう|天気予報|prakiraan cuaca
+32|はれ|晴れ|cerah
+32|くもり|曇り|mendung/berawan
+32|ゆき|雪|salju
+32|こうすいかくりつ|降水確率|kemungkinan turun hujan
+32|さいこうきおん|最高気温|suhu udara tertinggi
+32|さいていきおん|最低気温|suhu udara terendah
+32|はれのちくもり|晴れのち曇り|cerah kemudian berawan
+32|くもりときどきあめ|曇り時々雨|berawan kadang-kadang hujan
+32|くもりところによってあめ|曇り所によって雨|berawan dan hujan di beberapa daerah
+32|ちほう|地方|daerah
+32|ほっかいどうちほう|北海道地方|daerah Hokkaido
+32|とうほくちほう|東北地方|daerah Tohoku
+32|かんとうちほう|関東地方|daerah Kanto
+32|ちゅうぶちほう|中部地方|daerah Chubu
+32|きんきちほう|近畿地方|daerah Kinki
+32|ちゅうごくちほう|中国地方|daerah Chugoku
+32|しこくちほう|四国地方|daerah Shikoku
+32|きゅうしゅうちほう|九州地方|daerah Kyushu
+32|さっぽろ|札幌|Sapporo (kota di Hokkaido)
+32|ながの|長野|Nagano (kota)
+32|なごや|名古屋|Nagoya (kota)
+32|まつえ|松江|Matsue (kota)
+32|こうち|高知|Kochi (kota)
+32|かごしま|鹿児島|Kagoshima (kota)
+32|なは|那覇|Naha (kota di Okinawa)
+32|にわかあめ|にわか雨|hujan sebentar
+32|ゆうだち|夕立|hujan sebentar (sore hari)
+32|かみなり|雷|guntur, petir
+32|たいふう|台風|angin topan
+32|にじ|虹|pelangi
+32|くも|雲|awan
+32|しつど|湿度|kelembaban
+32|むしあつい|蒸し暑い|panas lembap
+32|さわやか|さわやか|segar
+33|にげます|逃げます|berlari
+33|さわぎます|騒ぎます|menghebohkan
+33|あきらめます||putus asa
+33|なげます|投げます|melempar
+33|まもります|守ります|menjaga
+33|はじまります|始まります|[upacara] dimulai
+33|しゅっせきします|出席します|menghadiri [rapat]
+33|つたえます|伝えます|menyampaikan
+33|ちゅういします|注意します|berhati-hati [pada mobil]
+33|はずします|外します|meninggalkan [tempat]
+33|もどります|戻ります|kembali
+33|あります|あります|ada [telepon]
+33|リサイクルします||mendaur ulang
+33|だめ||tidak baik
+33|おなじ|同じ|sama
+33|けいさつ|警察|polisi
+33|せき|席|tempat, kursi
+33|マーク||tanda, cap
+33|ボール||bola
+33|しめきり|締め切り|batas waktu
+33|きそく|規則|peraturan
+33|きけん|危険|bahaya
+33|しようきんし|使用禁止|dilarang pakai
+33|たちいりきんし|立入禁止|dilarang masuk
+33|じょこう|徐行|berjalan perlahan-lahan
+33|いりぐち|入口|pintu masuk
+33|でぐち|出口|pintu keluar
+33|ひじょうぐち|非常口|pintu darurat
+33|むりょう|無料|gratis, cuma-cuma
+33|わりびき|割引|diskon
+33|のみほうだい|飲み放題|minum sepuasnya
+33|しようちゅう|使用中|sedang dipakai
+33|ぼしゅうちゅう|募集中|sedang dicari
+33|~ちゅう|~中|sedang ~
+33|どういう~||bagaimana ~
+33|いくら[~ても]||bagaimana pun
+33|もう||lagi (digunakan bersama dengan bentuk negatif)
+33|あと~||sisa ~
+33|~ほど||kira-kira ~
+33|ちゅうしゃいはん|駐車違反|pelanggaran lalu lintas
+33|ばっきん|罰金|denda
+33|じしん|地震|gempa bumi
+33|おきます|起きます|terjadi
+33|たすけあいます|助け合います|bantu-membantu
+33|もともと||memang
+33|かなしい|悲しい|sedih
+33|もっと||lebih
+33|あいさつ||salam (~を します: memberi salam sepatah kata pada)
+33|あいて|相手|kawan, pasangan
+33|きもち|気持ち|perasaan
+33|ひょうしき|標識|tanda
+33|えいぎょうちゅう|営業中|buka
+33|じゅんびちゅう|準備中|dalam persiapan
+33|へいてん|閉店|tutup
+33|ていきゅうび|定休日|hari libur
+33|けしょうしつ|化粧室|kamar kecil/toilet/WC
+33|きんえんせき|禁煙席|tempat duduk bebas rokok
+33|よやくせき|予約席|tempat duduk yang telah dipesan
+33|かきげんきん|火気厳禁|mudah terbakar (dilarang api)
+33|われものちゅうい|割れ物注意|hati-hati barang pecah belah
+33|うんてんしょしんしゃちゅうい|運転初心者注意|tanda bagi pengemudi yang baru mendapatkan SIM
+33|こうじちゅう|工事中|sedang konstruksi
+33|えんそけいひょうはくざいふか|塩素系漂白剤不可|jangan gunakan pemutih
+33|てあらい|手洗い|cuci dengan tangan
+33|アイロン(低温)||harus disetrika dalam suhu rendah
+33|ドライクリーニング||hanya untuk di-dry cleaning
+34|みがきます|磨きます|menggosok [gigi]
+34|くみたてます|組み立てます|memasang
+34|おります|折ります|melipat
+34|きがつきます|気が つきます|teringat [barang ketinggalan]
+34|つけます||membubuhkan [kecap asin]
+34|みつかります|見つかります|[kunci] ditemukan
+34|しつもんします|質問します|bertanya
+34|さします|さします|memakai [payung], berpayung
+34|スポーツクラブ||sports club
+34|[お]しろ|[お]城|istana
+34|せつめいしょ|説明書|petunjuk
+34|ず|図|gambar
+34|せん|線|garis
+34|やじるし|矢印|tanda panah (aksara)
+34|くろ|黒|hitam (kata benda)
+34|しろ|白|putih (kata benda)
+34|あか|赤|merah (kata benda)
+34|あお|青|biru (kata benda)
+34|こん|紺|biru tua (kata benda)
+34|きいろ|黄色|kuning (kata benda)
+34|ちゃいろ|茶色|coklat (kata benda)
+34|しょうゆ||kecap asin
+34|ソース||kecap Inggris, kecap saos putih
+34|おきゃく[さん]|お客[さん]|tamu
+34|~か~||~ atau ~
+34|ゆうべ||tadi malam
+34|さっき||tadi
+34|さどう|茶道|upacara teh
+34|おちゃをたてます|お茶を たてます|membuat teh pada upacara minum teh
+34|さきに|先に|duluan
+34|のせます|載せます|memuatkan
+34|これでいいですか。||Boleh begini?
+34|いかがですか。||Bagaimana?
+34|にがい|苦い|pahit
+34|おやこどんぶり|親子どんぶり|Oyakodonburi (nama menu, daging ayam masak bersama telur dan disiram di atas nasi putih)
+34|ざいりょう|材料|bahan
+34|~ぶん|~分|untuk － (menyatakan jumlah) porsi
+34|~グラム||－ gram
+34|~こ|~個|－ buah (kata bilangan untuk menghitung benda yang kecil)
+34|たまねぎ||bawang bombai
+34|4ぶんの1(1/4)|4分の1 (1/4)|seperempat
+34|ちょうみりょう|調味料|bumbu
+34|てきとうなおおきさに|適当な 大きさに|ukuran sedang
+34|なべ||panci
+34|ひ|火|api
+34|ひにかけます|火に かけます|memasak, memanaskan, menaruh di atas api
+34|にます|煮ます|merebus
+34|にえます|煮えます|telah matang
+34|どんぶり||mangkuk
+34|たちます||lewat, berlalu
+34|りょうり|料理|masakan
+34|やく|焼く|membakar, memanggang
+34|あげる|揚げる|menggoreng
+34|いためる||menumis
+34|ゆでる||memasak, merebus
+34|むす|蒸す|mengukus
+34|たく|炊く|memasak nasi/menanak nasi
+34|むく||mengupas
+34|きざむ|刻む|mencincang
+34|かきまぜる|かき混ぜる|mengaduk, mencampur
+34|さとう|砂糖|gula
+34|しお|塩|garam
+34|す|酢|cuka
+34|みそ||miso, tauco
+34|あぶら|油|minyak, lemak
+34|マヨネーズ||mayones
+34|ケチャップ||saus tomat
+34|からし(マスタード)||mustard
+34|こしょう||merica
+34|とうがらし||cabai
+34|しょうが||jahe
+34|わさび||wasabi (lobak hijau Jepang)
+34|カレー粉||tepung kare
+34|だいどころようひん|台所用品|peralatan dapur
+34|おたま||sendok sayur
+34|まないた|まな板|talenan
+34|ほうちょう|包丁|pisau
+34|ふきん||kain lap
+34|フライパン||penggorengan
+34|でんしオーブンレンジ|電子オーブンレンジ|microwave oven
+34|しゃもじ||sendok nasi
+34|ざる||saringan
+34|ポット||termos
+34|ガスだい|ガス台|kompor gas
+34|ながし[だい]|流し[台]|bak cuci piring
+34|かんきせん|換気扇|kipas ventilasi
+35|さきます|咲きます|[bunga] mekar
+35|かわります|変わります|[warna] berubah
+35|こまります|困ります|bingung
+35|つけます|付けます|memberikan [tanda (benar)]
+35|なおります|治ります|[penyakit] sembuh
+35|なおります|直ります|[kerusakan] membaik
+35|クリックします||klik
+35|にゅうりょくします|入力します|mengisi
+35|ただしい|正しい|benar
+35|むこう|向こう|(di) sana, seberang
+35|しま|島|pulau
+35|みなと|港|pelabuhan
+35|きんじょ|近所|tetangga
+35|おくじょう|屋上|loteng
+35|かいがい|海外|luar negeri
+35|やまのぼり|山登り|mendaki gunung
+35|れきし|歴史|sejarah
+35|きかい|機会|kesempatan
+35|きょか|許可|izin
+35|まる|丸|bulat
+35|ふりがな||(huruf yang menyatakan cara membaca huruf Kanji)
+35|せつび|設備|fasilitas
+35|レバー||tuas
+35|キー||keyboard, tombol
+35|カーテン||gorden, tirai
+35|ひも||tali
+35|すいはんき|炊飯器|rice cooker
+35|は|葉|daun
+35|むかし|昔|dulu
+35|もっと||lebih
+35|これでおわりましょう。|これで 終わりましょう。|Mari kita selesai sampai di sini.
+35|はこね|箱根|nama daerah pariwisata, peristirahatan di prefektur Kanagawa
+35|にっこう|日光|nama daerah pariwisata di prefektur Tochigi
+35|アフリカ||Afrika
+35|マンガミュージアム||Kyoto International Manga Museum
+35|みんなのがっこう|みんなの 学校|nama sekolah Bahasa Jepang fiksi
+35|だいこくずし|大黒ずし|nama restoran sushi fiksi
+35|IMCパソコンきょうしつ|IMCパソコン教室|nama kursus komputer fiksi
+35|ははのあじ|母の 味|judul buku fiksi
+35|はる||nama salon kecantikan fiksi
+35|さとうしか|佐藤歯科|nama klinik gigi fiksi
+35|まいにちクッキング|毎日クッキング|nama sekolah masak fiksi
+35|それなら||kalau begitu
+35|やこうバス|夜行バス|bus malam
+35|さあ||Yaaa... (dipakai ketika kurang mengerti mengenai sesuatu hal)
+35|りょこうしゃ|旅行社|agen perjalanan
+35|くわしい|詳しい|teliti
+35|スキーじょう|スキー場|lapangan ski
+35|くさつ|草津|nama tempat peristirahatan di prefektur Gunma
+35|しがこうげん|志賀高原|nama dataran tinggi yang terletak di taman nasional di prefektur Nagano
+35|しゅ|朱|merah terang
+35|まじわります|交わります|bergaul
+35|ことわざ||pepatah
+35|かんけい|関係|hubungan
+35|なかよくします|仲よく します|bergaul dengan akrab
+35|ひつよう|必要|perlu
+35|すめばみやこ|住めば都|Alah bisa karena biasa (biar tempat bagaimana pun, kalau didiami lama akhirnya terasa tempat yang paling baik)
+35|さんにんよればもんじゅのちえ|三人寄れば文殊の知恵|Dua kepala lebih baik daripada satu (walaupun bukan orang yang unggul, jika tiga orang berkumpul dan berunding akan mendapat ide yang bagus)
+35|たてばしゃくやく、すわればぼたん、あるくすがたはゆりのはな|立てばしゃくやく、座ればぼたん、歩く姿はゆりの花|Cantiknya bagaikan bulan (perumpamaan untuk orang cantik: berdiri bagai bunga Paeonia lactiflora, duduk bagai Paeonia suffruticosa, berjalan bagai bunga lili)
+35|ちりもつもればやまとなる|ちりも積もれば山となる|Sedikit demi sedikit, lama-lama menjadi bukit
+35|うわさをすればかげ|うわさをすれば影|Panjang umur (kalau orang yang dibicarakan, yang dibicarakan suka muncul)
+35|くあればらくあり、らくあればくあり|苦あれば楽あり、楽あれば苦あり|Berakit-rakit ke hulu, berenang kemudian (bersusah payah dulu, bersenang-senang kemudian; sebaliknya juga demikian)
+36|あいます|会います|tertimpa [kecelakaan]
+36|ちょきんします|貯金します|menabung
+36|すぎます|過ぎます|lewat [pukul tujuh]
+36|なれます|慣れます|terbiasa [dengan tugas]
+36|くさります|腐ります|[makanan] busuk
+36|けんどう|剣道|kendo (anggar gaya Jepang)
+36|じゅうどう|柔道|judo
+36|ラッシュ||keramaian, kesibukan
+36|うちゅう|宇宙|angkasa
+36|きょく|曲|musik
+36|まいしゅう|毎週|setiap minggu
+36|まいつき|毎月|setiap bulan
+36|まいとし(まいねん)|毎年|setiap tahun
+36|このごろ||akhir-akhir ini
+36|やっと||akhirnya
+36|かなり||cukup
+36|かならず|必ず|pasti
+36|ぜったいに|絶対に|mutlak
+36|じょうずに|上手に|dengan pandai
+36|できるだけ||sedapat mungkin
+36|ほとんど||sebagian besar
+36|ショパン||Chopin, musisi Polandia (1810-1849)
+36|おきゃくさま|お客様|tamu (kata hormat dari おきゃくさん)
+36|とくべつ|特別|khusus, spesial
+36|していらっしゃいます||melakukan (kata hormat dari して います)
+36|すいえい|水泳|renang
+36|ちがいます|違います|salah, tidak benar
+36|つかっていらっしゃるんですね。|使って いらっしゃるんですね。|Menggunakan ~, ya./Memakai ~, ya. (kata hormat dari つかって いるんですね)
+36|チャレンジします||menantang
+36|きもち|気持ち|sikap
+36|のりもの|乗り物|kendaraan
+36|~せいき|~世紀|abad ke －
+36|とおく|遠く|jauh
+36|めずらしい|珍しい|langka
+36|きしゃ|汽車|kereta api
+36|きせん|汽船|kapal api
+36|おおぜいの~|大勢の ~|banyak ~
+36|はこびます|運びます|mengangkut
+36|りようします|利用します|menggunakan
+36|じゆうに|自由に|dengan bebas
+36|けんこう|健康|kesehatan
+36|きそくただしいせいかつをする|規則正しい生活をする|hidup secara teratur
+36|はやね、はやおきをする|早寝、早起きをする|cepat tidur dan bangun pagi-pagi
+36|うんどうする／スポーツをする|運動する／スポーツをする|berolahraga
+36|よくあるく|よく歩く|suka berjalan kaki
+36|すききらいがない|好き嫌いがない|tidak pilih makan
+36|えいようのバランスをかんがえてたべる|栄養のバランスを考えて食べる|makan dengan mempertimbangkan keseimbangan gizi
+36|けんこうしんだんをうける|健康診断を受ける|mengikuti pemeriksaan kesehatan
+36|よふかしをする|夜更かしをする|begadang
+36|あまりうんどうしない|あまり運動しない|kurang berolahraga
+36|すききらいがある|好き嫌いがある|pilih makan
+36|よくインスタントしょくひんをたべる|よくインスタント食品を食べる|suka makan makanan instan
+36|がいしょくがおおい|外食が多い|sering makan di luar
+36|たばこをすう|たばこを吸う|merokok
+36|よくおさけをのむ|よくお酒を飲む|suka minum minuman keras
+36|いつつのたいせつなえいようそ|5つの大切な栄養素|lima nutrisi penting
+36|えいようそ|栄養素|nutrisi
+36|たんすいかぶつ|炭水化物|karbohidrat
+36|いも||kentang
+36|たんぱく質||protein (たんぱくしつ)
+36|とうふ||tahu
+36|まめ|豆|kacang-kacangan
+36|しぼう|脂肪|lemak
+36|ビタミン||vitamin
+36|カルシウム||kalsium
+36|かいそう|海草|rumput laut
+36|のり||nori (olahan rumput laut)
+37|ほめます|褒めます|memuji
+37|しかります||memarahi
+37|さそいます|誘います|mengajak
+37|しょうたいします|招待します|mengundang
+37|たのみます|頼みます|meminta
+37|ちゅういします|注意します|menasihati
+37|とります||mencuri
+37|ふみます|踏みます|menginjak
+37|こわします|壊します|merusak
+37|よごします|汚します|mengotori
+37|おこないます|行います|mengadakan
+37|ゆしゅつします|輸出します|mengekspor
+37|ゆにゅうします|輸入します|mengimpor
+37|ほんやくします|翻訳します|menerjemahkan
+37|はつめいします|発明します|menciptakan
+37|はっけんします|発見します|menemukan
+37|こめ|米|beras
+37|むぎ|麦|gandum
+37|せきゆ|石油|minyak tanah
+37|げんりょう|原料|bahan baku
+37|インスタントラーメン||mie instan
+37|デート||kencan
+37|どろぼう|泥棒|pencuri
+37|けいかん|警官|polisi
+37|せかいじゅう|世界中|seluruh dunia
+37|~じゅう|~中|seluruh ~
+37|~せいき|~世紀|abad ke －
+37|なにご|何語|bahasa apa
+37|だれか||siapa
+37|よかったですね。||Bagus, ya.
+37|オリンピック||Olimpiade
+37|ワールドカップ||piala dunia
+37|とうだいじ|東大寺|Todaiji (nama kuil)
+37|だいぶつ|大仏|Daibutsu (patung Budha yang besar)
+37|えどじだい|江戸時代|Zaman Edo (1603-1868)
+37|ポルトガル||Portugis
+37|サウジアラビア||Arab Saudi
+37|ロシア||Rusia
+37|みなさま|皆様|semuanya (kata hormat dari みなさん)
+37|やけます|焼けます|[rumah] terbakar
+37|そのあと|その後|setelah, sesudah
+37|せかいいさん|世界遺産|Situs Warisan Dunia UNESCO
+37|~のひとつ|~の 一つ|salah satu ~
+37|きんいろ|金色|warna emas
+37|ほんもの|本物|asli
+37|きん|金|emas
+37|~キロ|~キロ|－ kilogram, － kilometer
+37|うつくしい|美しい|indah, elok
+37|ごうか|豪華|mewah
+37|ちょうこく|彫刻|ukiran, pahatan
+37|いいつたえ|言い伝え|tradisi
+37|ねむります|眠ります|tidur
+37|ほります|彫ります|mengukir, memahat
+37|なかま|仲間|teman
+37|しかし||tetapi
+37|そのあと|その あと|setelah itu, sesudah itu
+37|いっしょうけんめい|一生懸命|sungguh-sungguh
+37|ねずみ||tikus
+37|いっぴきもいません。|一匹も いません。|Tidak ada seekor pun.
+37|とうしょうぐう|東照宮|kuil yang ada di Nikko, prefektur Tochigi yang mengabadikan Tokugawa Ieyasu
+37|ねむりねこ|眠り猫|kucing yang sedang tidur, nama ukiran
+37|ひだりじんごろう|左甚五郎|pemahat terkenal pada zaman Edo (1594-1651)
+37|じこ・じけん|事故・事件|kecelakaan, kejadian
+37|ころす|殺す|membunuh
+37|うつ|撃つ|menembak
+37|さす|刺す|menikam
+37|かむ||menggigit
+37|ひく||melindas
+37|はねる||menabrak
+37|しょうとつする|衝突する|menabrak
+37|ついとつする|追突する|menabrak dari belakang
+37|ぬすむ|盗む|mencuri
+37|ゆうかいする|誘拐する|menculik
+37|ハイジャックする||membajak
+37|ついらくする|墜落する|jatuh (pesawat)
+37|はこぶ|運ぶ|mengangkut
+37|たすける|助ける|membantu
+37|ばくはつする|爆発する|meledak
+37|ちんぼつする|沈没する|tenggelam
+38|さんかします|参加します|mengikuti [perjalanan]
+38|そだてます|育てます|memelihara
+38|はこびます|運びます|mengangkut
+38|にゅういんします|入院します|opname
+38|たいいんします|退院します|keluar dari rumah sakit
+38|いれます|入れます|menghidupkan [power suply]
+38|きります|切ります|mematikan [power suply]
+38|かけます|掛けます|mengunci
+38|つきます||berbohong
+38|きもちがいい|気持ちが いい|rasa enak
+38|きもちがわるい|気持ちが 悪い|rasa tidak enak, jijik
+38|おおきな~|大きな ~|besar ~
+38|ちいさな~|小さな ~|kecil ~
+38|あかちゃん|赤ちゃん|bayi
+38|しょうがっこう|小学校|SD
+38|ちゅうがっこう|中学校|SMP
+38|えきまえ|駅前|depan stasiun
+38|かいがん|海岸|pantai laut
+38|こうじょう|工場|pabrik
+38|むら|村|desa, kampung
+38|かな||huruf Hiragana, huruf Katakana
+38|ゆびわ|指輪|cincin
+38|でんげん|電源|power suply
+38|しゅうかん|習慣|kebiasaan
+38|けんこう|健康|kesehatan
+38|~せい|~製|buatan ~
+38|おととし||dua tahun yang lalu
+38|[あ,]いけない。||[Ah,] Salah! (memakai ketika bersalah atau gagal)
+38|おさきに[しつれいします]。|お先に [失礼します]。|[Permisi] duluan.
+38|げんばくドーム|原爆ドーム|dome untuk memperingati kejatuhan bom atom di Hiroshima
+38|いずもたいしゃ|出雲大社|kuil yang ada di Kota Izumo, prefektur Shimane
+38|チェンマイ||Chiang mai (Thailan)
+38|かいらん|回覧|edaran
+38|けんきゅうしつ|研究室|labolatorium/ruang dosen
+38|きちんと||dengan rapi
+38|せいりします|整理します|mengatur
+38|ほうほう|方法|cara
+38|~という||dengan judul ~
+38|~さつ|~冊|－ buah (kata bantu bilangan untuk menghitung buku dan lain-lain)
+38|はんこ||cap
+38|おします|押します|mengecap
+38|ふたご|双子|anak kembar
+38|しまい|姉妹|saudara perempuan
+38|5ねんせい|5年生|kelas lima
+38|にています|似て います|mirip
+38|せいかく|性格|sifat
+38|おとなしい||pendiam
+38|やさしい|優しい|baik hati
+38|せわをします|世話を します|merawat
+38|じかんがたちます|時間が たちます|waktu berlalu
+38|だいすき|大好き|suka sekali
+38|~てん|~点|－ point
+38|きがつよい|気が 強い|bersifat keras, galak
+38|けんかします||bertengkar
+38|ふしぎ|不思議|aneh
+38|ねんれい|年齢|usia, umur
+38|しかた||cara
+38|いち|位置|lokasi/posisi
+38|うえからにだんめ|上から2段目|kedua dari atas
+38|おく|奥|bagian dalam
+38|てまえ|手前|bagian depan
+38|まえからにれつめ|前から2列目|deretan kedua dari depan
+38|[つくえの]まわり|[机の]周り|sekitar [meja]
+38|[きょうしつの]まんなか|[教室の]真ん中|tengah [kelas]
+38|[ほんの]そば|[本の]そば|samping [buku]
+38|[テレビの]よこ|[テレビの]横|sebelah [televisi]
+38|すみ|隅|pojok/sudut
+38|ななめまえ|斜め前|samping depan
+38|ななめうしろ|斜めうしろ|samping belakang
+38|にぎょうめ|2行目|baris kedua
+38|4ページ|4ページ|halaman 4
+38|さんぎょうめ|3行目|baris ketiga
+39|こたえます|答えます|menjawab [pada pertanyaan]
+39|たおれます|倒れます|[bangunan] roboh
+39|とおります|通ります|lewat, melalui [jalan]
+39|しにます|死にます|meninggal dunia
+39|びっくりします||kaget
+39|がっかりします||putus asa
+39|あんしんします|安心します|lega
+39|けんかします||bertengkar
+39|りこんします|離婚します|bercerai
+39|ふとります|太ります|menjadi gemuk
+39|やせます||menjadi kurus
+39|ふくざつ|複雑|rumit
+39|じゃま|邪魔|gangguan
+39|かたい|硬い|keras
+39|やわらかい|軟らかい|lembut
+39|きたない|汚い|kotor
+39|うれしい||senang
+39|かなしい|悲しい|sedih
+39|はずかしい|恥ずかしい|malu
+39|しゅしょう|首相|perdana menteri
+39|じしん|地震|gempa bumi
+39|つなみ|津波|tsunami
+39|たいふう|台風|angin topan
+39|かみなり|雷|petir
+39|かじ|火事|kebakaran
+39|じこ|事故|kecelakaan
+39|ハイキング||hiking
+39|[お]みあい|[お]見合い|perjodohan
+39|そうさ|操作|operasi (~します: mengoperasi)
+39|かいじょう|会場|tempat
+39|~だい|~代|biaya untuk ~
+39|~や|~屋|penjual ~
+39|フロント||resepsionis
+39|~ごうしつ|~号室|kamar nomor －
+39|タオル||handuk
+39|せっけん||sabun
+39|おおぜい|大勢|banyak
+39|おつかれさまでした。|お疲れさまでした。|Terima kasih atas kerja samanya. (perkataan terhadap rekan atau bawahan untuk menghargai tenaga kerja mereka)
+39|うかがいます。|伺います。|pergi (kata merendahkan diri dari いきま す)
+39|とちゅうで|途中で|di tengah
+39|トラック||truk
+39|ぶつかります||menabrak
+39|おとな|大人|orang dewasa
+39|しかし||tetapi
+39|また||dan
+39|ようふく|洋服|baju
+39|せいようかします|西洋化します|kebarat-baratan
+39|あいます|合います|cocok
+39|いまでは|今では|sekarang
+39|せいじんしき|成人式|upacara pendewasaan
+39|でんとうてき|伝統的|secara tradisional
+39|きもち|気持ち|perasaan
+39|たのしい|楽しい|senang
+39|さびしい|寂しい|sepi
+39|うらやましい|うらやましい|iri hati
+39|なつかしい|懐かしい|terkenang
+39|うっとりする||terpesona
+39|いらいらする||jengkel
+39|どきどきする||takut (berdebar-debar)
+39|はらはらする||merasa tidak nyaman
+39|わくわくする||sangat bersemangat, menggugah
+40|かぞえます|数えます|menghitung
+40|はかります|測ります|mengukur, menimbang
+40|たしかめます|確かめます|mengecek
+40|あいます|合います|cocok [ukurannya]
+40|しゅっぱつします|出発します|berangkat
+40|とうちゃくします|到着します|tiba
+40|よいます|酔います|mabuk
+40|うまくいきます||berhasil dengan baik
+40|でます|出ます|diberikan [soal di ujian]
+40|そうだんします|相談します|berkonsultasi
+40|ひつよう|必要|perlu
+40|てんきよほう|天気予報|prakiraan cuaca
+40|ぼうねんかい|忘年会|pesta akhir tahun
+40|しんねんかい|新年会|pesta tahun baru
+40|にじかい|二次会|pesta untuk kedua kalinya
+40|はっぴょうかい|発表会|mempresentasi
+40|たいかい|大会|lomba
+40|マラソン||maraton
+40|コンテスト||pertandingan
+40|おもて|表|muka
+40|うら|裏|belakang
+40|まちがい||kesalahan
+40|きず|傷|cacat, luka
+40|ズボン||celana
+40|[お]としより|[お]年寄り|orang lanjut usia
+40|ながさ|長さ|panjangnya
+40|おもさ|重さ|beratnya
+40|たかさ|高さ|tingginya
+40|おおきさ|大きさ|besarnya
+40|[－]びん|[－]便|[－] botol
+40|~こ|~個|－ buah (kata bantu bilangan untuk menghitung benda kecil)
+40|~ほん(－ぼん、－ぽん)|~本|－ batang (kata bantu bilangan untuk menghitung benda yang kurus panjang)
+40|~はい(－ぱい、－ばい)|~杯|－ cangkir, － gelas (kata bantu bilangan untuk menghitung isi cangkir atau gelas dan lain-lain)
+40|~センチ||－ senti
+40|~ミリ||－ mili
+40|~グラム||－ gram
+40|~いじょう|~以上|ke atas ~
+40|~いか|~以下|ke bawah ~
+40|ながさき|長崎|tempat pemerintah daerah prefektur Nagasaki
+40|せんだい|仙台|tempat pemerintah daerah prefektur Miyagi
+40|JL||Japan Airlines
+40|たなばたまつり|七夕祭り|Tanabata Matsuri, Perayaan Bintang
+40|とうしょうぐう|東照宮|kuil di prefektur Tochigi yang mengabadikan Tokugawa Ieyasu
+40|どうでしょうか。||Bagaimana? (kata sopan dari どうですか)
+40|テスト||ujian
+40|せいせき|成績|nilai
+40|ところで||ngomong-ngomong
+40|いらっしゃいます||datang (kata hormat dari きます)
+40|ようす|様子|kondisi, suasana
+40|じけん|事件|kejadian
+40|オートバイ||sepeda motor
+40|ばくだん|爆弾|bom
+40|つみます|積みます|memuatkan
+40|うんてんしゅ|運転手|sopir
+40|はなれた|離れた|terpisah
+40|きゅうに|急に|mendadak, tiba-tiba
+40|うごかします|動かします|menggerakkan
+40|いっしょうけんめい|一生懸命|sungguh-sungguh
+40|はんにん|犯人|pelaku
+40|おとこ|男|laki-laki
+40|てにいれます|手に 入れます|mendapatkan
+40|いまでも|今でも|sampai sekarang
+40|たんい|単位|satuan, ukuran
+40|せん|線|garis
+40|かたち|形|bentuk
+40|もよう|模様|corak
+40|めんせき|面積|bidang
+40|へいほうセンチメートル|平方センチメートル|sentimeter persegi
+40|へいほうメートル|平方メートル|meter persegi
+40|へいほうキロメートル|平方キロメートル|kilometer persegi
+40|メートル||meter
+40|たいせき・ようせき|体積・容積|volume・kapasitas
+40|りっぽうセンチメートル|立方センチメートル|sentimeter kubik
+40|りっぽうメートル|立方メートル|meter kubik
+40|ミリリットル||mililiter
+40|シーシー||cc
+40|リットル||liter
+40|ミリグラム||miligram
+40|トン||ton
+40|けいさん|計算|perhitungan
+40|たす|足す|tambah
+40|ひく|引く|kurang
+40|かける|掛ける|kali
+40|わる|割る|bagi
+40|イコール||sama dengan (は)
+40|ちょくせん|直線|garis lurus
+40|きょくせん|曲線|garis kurva
+40|てんせん|点線|garis titik
+40|えん(まる)|円 (丸)|bulat
+40|さんかく[けい]|三角[形]|[bentuk] segi tiga
+40|しかく[けい]|四角[形]|[bentuk] segi empat
+40|たてじま|縦じま|belang vertikal
+40|よこじま|横じま|belang horizontal
+40|チェック||berpetak-petak
+40|みずたま|水玉|berbintik-bintik
+40|はながら|花柄|corak bunga
+40|むじ|無地|polos
+41|いただきます||menerima (kata merendahkan diri dari も らいます)
+41|くださいます||memberikan (kata hormat dari くれます)
+41|やります||memberi (terhadap orang yang lebih mudah, bawahan, binatang dan tanaman)
+41|あげます|上げます|menaikkan
+41|さげます|下げます|menurunkan
+41|しんせつにします|親切に します|berbaik hati
+41|かわいい||manis
+41|めずらしい|珍しい|langka
+41|おいわい|お祝い|perayaan, hadiah (~を します: merayakan)
+41|おとしだま|お年玉|otoshidama (angpao)
+41|[お]みまい|[お]見舞い|pembesukan, barang bantuan
+41|きょうみ|興味|minat ([コンピューターに] ~が あります: berminat pada [komputer])
+41|じょうほう|情報|informasi
+41|ぶんぽう|文法|tata bahasa
+41|はつおん|発音|ungkapan
+41|さる|猿|monyet
+41|えさ||makanan
+41|おもちゃ||mainan
+41|えほん|絵本|buku gambar
+41|えはがき|絵はがき|kartu pos bergambar
+41|ドライバー||obeng
+41|ハンカチ||sapu tangan
+41|くつした|靴下|kaus kaki
+41|てぶくろ|手袋|sarung tangan
+41|ようちえん|幼稚園|TK
+41|だんぼう|暖房|alat pemanas
+41|れいぼう|冷房|AC
+41|おんど|温度|suhu
+41|そふ|祖父|kakek
+41|そぼ|祖母|nenek
+41|まご|孫|cucu
+41|おまごさん|お孫さん|cucu (untuk orang lain)
+41|おじ||om
+41|おじさん||om (untuk orang lain)
+41|おば||tante
+41|おばさん||tante (untuk orang lain)
+41|かんりにん|管理人|penjaga (contoh: penjaga apartmen)
+41|~さん||Bapak ~, Ibu ~, Sdr. ~ (akhiran yang dibubuhkan di belakang nama pekerjaan atau jawatan untuk menyatakan kehalusan)
+41|このあいだ|この間|beberapa saat lalu
+41|ひとこと||sepatah kata
+41|~ずつ||setiap ~ (contoh: setiap sepatah kata, setiap dua orang, setiap tiga lembar)
+41|ふたり|二人|pasangan
+41|おたく|お宅|rumah (kata hormat dari うち atau いえ)
+41|どうぞおしあわせに。|どうぞ お幸せに。|Selamat berbahagia!
+41|むかしばなし|昔話|cerita dongeng
+41|ある~||suatu ~
+41|おとこ|男|laki-laki
+41|こどもたち|子どもたち|anak-anak
+41|いじめます||menyiksa, menganiayai
+41|かめ||kura-kura
+41|たすけます|助けます|membantu, menolong
+41|やさしい|優しい|baik hati
+41|おひめさま|お姫様|putri
+41|くらします|暮らします|hidup
+41|りく|陸|daratan
+41|すると||kemudian
+41|けむり|煙|asap
+41|まっしろ|真っ白|putih
+41|なかみ|中身|isi
+41|うらしまたろう|浦島太郎|nama peran utama cerita dongen
+41|べんりじょうほう|便利情報|informasi berguna
+41|かしいしょう|貸衣装|penyewaan pakaian
+41|みんなのはれぎ|みんなの晴れ着|baju pesta untuk semua
+41|なんでもそろいます|何でもそろいます|tersedia apa saja
+41|しんさくがいっぱい|新作がいっぱい|banyak model terbaru
+41|しちごさん|七五三|perayaan umur tujuh, lima, dan tiga tahun
+41|そつぎょうしき|卒業式|wisuda
+41|せいじんしき|成人式|upacara pendewasaan
+41|けっこんしき|結婚式|upacara pernikahan
+41|とまりませんか|泊まりませんか|ayo menginap
+41|みんしゅく|民宿|penginapan
+41|やど|宿|penginapan
+41|やすい、しんせつ、かていてきなやど|安い、親切、家庭的な宿|penginapan yang murah, baik hati, dan suasana kekeluargaan
+41|こうみんかん|公民館|balai (pertemuan warga)
+41|こうみんかんからのおしらせ|公民館からのお知らせ|pengumuman dari balai
+41|にほんりょうりこうしゅうかい|日本料理講習会|les masakan Jepang
+41|いけばなスクール|生け花スクール|klub merangkai bunga
+41|にほんごきょうしつ|日本語教室|kursus bahasa Jepang
+41|まいつきだいさんにちようび|毎月第3日曜日|Hari Minggu ketiga setiap bulan
+41|バザー||bazar
+41|べんりや|便利屋|tukang serba guna
+41|いえのしゅうり、そうじ|家の修理、掃除|perbaikan dan pembersihan rumah
+41|あかちゃん、こどものせわ|赤ちゃん、子どもの世話|menjaga bayi dan anak
+41|いぬのさんぽ|犬の散歩|berjalan-jalan dengan anjing
+41|はなしあいて|話し相手|lawan bicara
+41|レンタルサービス||jasa penyewaan
+41|なんでもかします|何でも貸します|menyewakan apa saja
+41|カラオケ||karaoke
+41|ビデオカメラ||kamera video
+41|けいたいでんわ|携帯電話|HP, ponsel
+41|ベビー用品||peralatan untuk bayi (ベビーようひん)
+41|レジャー用品||peralatan rekreasi (レジャーようひん)
+41|りょこうようひん|旅行用品|peralatan perjalanan
+41|おてらでたいけんできます|お寺で体験できます|dapat mencoba di wihara
+41|ぜんができます|禅ができます|dapat bermeditasi Zen (ala Budha Jepang)
+41|しょうじんりょうりがたべられます|精進料理が食べられます|dapat sajian makanan vegetarian
+41|きんぎんじ|金銀寺|Kinginji (nama kuil)
+42|つつみます|包みます|membungkus
+42|わかします|沸かします|memasak
+42|まぜます|混ぜます|mencampur
+42|けいさんします|計算します|menghitung
+42|ならびます||berbaris
+42|じょうぶ|丈夫|kuat
+42|アパート||apartmen
+42|べんごし|弁護士|pengacara
+42|おんがくか|音楽家|musisi
+42|こどもたち|子どもたち|anak-anak
+42|しぜん|自然|alam
+42|きょういく|教育|pendidikan
+42|ぶんか|文化|budaya
+42|しゃかい|社会|sosial
+42|せいじ|政治|politik
+42|ほうりつ|法律|hukum
+42|せんそう|戦争|perang
+42|へいわ|平和|damai, perdamaian
+42|もくてき|目的|tujuan
+42|ろんぶん|論文|tesis
+42|たのしみ|楽しみ|kesenangan
+42|ミキサー||mixer, alat pencampur listrik
+42|やかん||ceret, ketel
+42|ふた||tutup
+42|せんぬき|栓抜き|pembuka botol
+42|かんきり|缶切り|pembuka kaleng
+42|かんづめ|缶詰|makanan kaleng
+42|のしぶくろ|のし袋|amplop khusus untuk mengisi uang
+42|ふろしき||kain untuk membungkus barang
+42|そろばん||sempoa
+42|たいおんけい|体温計|termometer
+42|ざいりょう|材料|bahan
+42|ある~||suatu ~
+42|いっしょうけんめい|一生懸命|sungguh-sungguh
+42|なぜ||kenapa
+42|どのくらい||berapa banyak
+42|こくれん|国連|Perserikatan Bangsa-Bangsa
+42|エリーゼのために||Kepada Elise (nama musik)
+42|ベートーベン||Ludwig van Beethoven, musisi Jerman (1770-1827)
+42|こどもニュース||berita fiksi
+42|でます|出ます|diberi [bonus]
+42|はんぶん|半分|setengah
+42|ローン||kredit
+42|カップめん||mie instan (diisi di dalam tempat sekali pakai seperti mangkuk plastik)
+42|せかいはつ|世界初|pertama di dunia
+42|~によって||oleh ~
+42|どんぶり||mangkuk
+42|めん||mie
+42|ひろめます|広めます|menyebarluaskan
+42|しじょうちょうさ|市場調査|riset pemasaran
+42|わります|割ります|membagi
+42|そそぎます|注ぎます|menyiram
+42|チキンラーメン||nama produk mie instan
+42|あんどうももふく|安藤百福|pengusaha Jepang, penemu (1910-2007)
+42|じむようひん|事務用品|perlengkapan kantor
+42|どうぐ|道具|alat
+42|とじる||menjilid
+42|ホッチキス||stepler
+42|はさむ|挟む|menjepit
+42|クリップ||jepitan
+42|とめる|留める|menyematkan
+42|がびょう|画びょう|paku payung
+42|きる|切る|memotong, menggunting
+42|カッター||pisau
+42|はさみ||gunting
+42|はる|貼る|menempelkan
+42|セロテープ||selotip
+42|ガムテープ||selotip kertas
+42|のり||lem
+42|けずる|削る|meruncingkan
+42|えんぴつけずり|鉛筆削り|perancing pensil
+42|ファイルする||mengarsipkan
+42|ファイル||map
+42|けす|消す|menghapus
+42|けしゴム|消しゴム|penghapus karet
+42|しゅうせいえき|修正液|penghapus cair
+42|あなをあける|穴を開ける|melubangi
+42|パンチ||pelubang kertas
+42|でんたく|電卓|kalkulator
+42|せんをひく|線を引く|menggaris
+42|じょうぎ(ものさし)|定規 (物差し)|penggaris
+42|のこぎり||gergaji
+42|くぎ||paku
+42|[くぎを]うつ|[くぎを]打つ|memaku
+42|かなづち|金づち|palu
+42|まげる|曲げる|membengkokkan, melengkungkan
+42|ペンチ||tang
+42|ねじ||sekrup
+42|[ねじを]しめる|[ねじを]締める|mengetatkan/mengeratkan [sekrup]
+42|[ねじを]ゆるめる|[ねじを]緩める|melonggarkan [sekrup]
+42|ドライバー||obeng
+43|ふえます|増えます|[ekspor] bertambah
+43|へります|減ります|[ekspor] berkurang
+43|あがります|上がります|[harga] meningkat
+43|さがります|下がります|[harga] menurun
+43|きれます|切れます|[tali] terputus
+43|とれます||[kancing] terlepas
+43|おちます|落ちます|[barang] terjatuh
+43|なくなります||[bensin] habis
+43|へん|変|aneh
+43|しあわせ|幸せ|bahagia
+43|らく|楽|ringan
+43|うまい||enak, lezat
+43|まずい||tidak enak, tidak sedap
+43|つまらない||tidak menarik, tidak berguna, percuma
+43|やさしい|優しい|baik hati
+43|ガソリン||bensin
+43|ひ|火|api
+43|パンフレット||pamflet
+43|いまにも|今にも|sekarang juga (dipakai untuk menggambarkan kondisi persisi akan terjadi perubahan)
+43|わあ||Wah!
+43|ばら||bunga mawar
+43|ドライブ||berjalan-jalan dengan mobil
+43|りゆう|理由|alasan
+43|あやまります|謝ります|memohon maaf
+43|しりあいます|知り合います|berkenalan
+43|せいかく・せいしつ|性格・性質|karakter, sifat
+43|あかるい|明るい|ceria
+43|くらい|暗い|muram
+43|かっぱつ|活発|aktif, giat
+43|せいじつ|誠実|setia
+43|わがまま||egois
+43|おとなしい||pendiam
+43|つめたい|冷たい|kaku (dingin)
+43|きびしい|厳しい|keras, disiplin
+43|きがながい|気が長い|kalem
+43|きがみじかい|気が短い|tidak sabar, cepat marah
+43|きがつよい|気が強い|bersifat keras, galak
+43|きがよわい|気が弱い|penakut
+43|まじめ||serius, tekun
+43|ふまじめ||tidak serius, sembrono
+43|がんこ|頑固|keras kepala
+43|すなお|素直|penurut, lemah-lembut
+43|いじわる|意地悪|jahat
+43|かちき|勝ち気|tidak mau kalah
+43|しんけいしつ|神経質|gelisah, gugup
+44|なきます|泣きます|menangis
+44|わらいます|笑います|tertawa
+44|ねむります|眠ります|tidur
+44|かわきます|乾きます|[kemeja] mengering
+44|ぬれます||[kemeja] basah
+44|すべります|滑ります|licin
+44|おきます|起きます|terjadi [kecelakaan]
+44|ちょうせつします|調節します|mengontrol
+44|あんぜん|安全|aman
+44|きけん|危険|bahaya
+44|こい|濃い|kental (rasa makanan atau minuman), tua (warna)
+44|うすい|薄い|tawar (rasa makanan atau minuman), muda (warna), tipis (barang)
+44|あつい|厚い|tebal
+44|ふとい|太い|gemuk
+44|ほそい|細い|kurus
+44|くうき|空気|udara
+44|なみだ|涙|air mata
+44|わしょく|和食|makanan Jepang
+44|ようしょく|洋食|makanan Barat
+44|おかず||lauk-pauk
+44|りょう|量|kuantitas
+44|~ばい|~倍|－ kali
+44|シングル||single
+44|ツイン||twin
+44|せんたくもの|洗濯物|cucian
+44|DVD||DVD
+44|ホテルひろしま||hotel fiksi
+44|どうなさいますか。||Modelnya bagaimana? (hormat)
+44|カット||potong rambut
+44|シャンプー||keramas (~を します: berkeramas)
+44|どういうふうになさいますか。||Modelnya seperti bagaimana? (hormat)
+44|ショート||pendek
+44|~みたいにしてください。||Tolong buat seperti ~.
+44|これでよろしいでしょうか。||Bagaimana kalau begini? (sopan)
+44|[どうも]おつかれさまでした。|[どうも] お疲れさまでした。|Sudah selesai. (diucapkan kepada tamu)
+44|いやがります|嫌がります|tidak mau
+44|また||dan, lalu
+44|うまく||pandai, pintar
+44|じゅんじょ|順序|urutan
+44|あんしん|安心|kelegaan
+44|ひょうげん|表現|ungkapan, ekspresi
+44|たとえば|例えば|misalnya
+44|わかれます|別れます|berpisah
+44|これら||itu
+44|えんぎがわるい|縁起が 悪い|tidak menyenangkan
+44|びよういん|美容院|salon kecantikan
+44|りはつてん|理髪店|tempat pemangkas rambut
+44|ヘアサロン||salon rambut
+44|パーマ||keriting
+44|トリートメント||perawatan rambut
+44|ブロー||blow
+44|カラー||mengecat rambut, mewarnai rambut
+44|エクステ||sambung rambut
+44|ネイル||perawatan kuku
+44|フェイシャルマッサージ||facial massage
+44|メイク||dandan, makeup
+44|きつけ|着付け|membantu mengenakan kimono
+44|みみがみえるくらいに|耳が見えるくらいに|sampai telinga terlihat
+44|かたにかかるくらいに|肩にかかるくらいに|sebahu
+44|まゆがかくれるくらいに|まゆが隠れるくらいに|sebatas alis
+44|1センチくらい|1センチくらい|kira-kira 1 cm
+44|このしゃしんみたいに|この写真みたいに|seperti foto ini
+44|きってください|切ってください|tolong potong rambut saya
+44|かみ|髪|rambut
+44|かみをとかす|髪をとかす|menyisir rambut
+44|かみをわける|髪を分ける|belah rambut
+44|かみをまとめる|髪をまとめる|mengikat rambut
+44|かみをアップにする|髪をアップにする|menyanggul
+44|かみをそめる|髪を染める|mewarnai rambut
+44|ひげ／かおをそる|ひげ/顔をそる|mencukur kumis/bulu wajah
+44|けしょう／メイクする|化粧/メイクする|dandan, berdandan
+44|みつあみにする|三つ編みにする|kepang
+44|かりあげる|刈り上げる|mencukur
+44|パーマをかける||mengeriting rambut
+45|しんじます|信じます|percaya
+45|キャンセルします||membatalkan
+45|しらせます|知らせます|memberitahukan
+45|ほしょうしょ|保証書|surat garansi
+45|りょうしゅうしょ|領収書|kuitansi
+45|キャンプ||kemah
+45|ちゅうし|中止|pembatalan
+45|てん|点|poin
+45|うめ|梅|bunga plum
+45|110ばん|110番|nomor telepon polisi untuk saat darurat
+45|119ばん|119番|nomor telepon departmen pemadan kebakaran dan penanggulangan bencana untuk saat darurat
+45|きゅうに|急に|mendadak, tiba-tiba
+45|むりに|無理に|dengan paksa
+45|たのしみにしています|楽しみに して います|menikmati
+45|いじょうです。|以上です。|Sekian.
+45|かかりいん|係員|staf, petugas
+45|コース||jalur, jalan, rute
+45|スタート||mulai
+45|~い|~位|juara ke －
+45|ゆうしょうします|優勝します|menang
+45|なやみ|悩み|masalah
+45|めざまし[どけい]|目覚まし[時計]|weker
+45|めがさめます|目が 覚めます|terbangun
+45|だいがくせい|大学生|mahasiswa
+45|かいとう|回答|jawaban (~します: menjawab)
+45|なります|鳴ります|berbunyi
+45|セットします||memasang, mengatur
+45|それでも||masih
+45|びょういん|病院|rumah sakit
+45|せいけいげか|整形外科|bedah ortopedi
+45|ひふか|皮膚科|dermatologi
+45|さんふじんか|産婦人科|obstetrics dan gynaecology
+45|ないか|内科|penyakit dalam
+45|まちあいしつ|待合室|ruang tunggu
+45|げか|外科|bedah
+45|がんか|眼科|mata
+45|しょうにか|小児科|pediatri/kesehatan anak
+45|しか|歯科|gigi
+45|ひにょうきか|泌尿器科|ulorogi
+45|かいけい|会計|kasir
+45|うけつけ|受付|tempat pendaftaran
+45|じびいんこうか|耳鼻咽喉科|THT
+45|やっきょく|薬局|apotek
+45|しんさつする|診察する|memeriksa
+45|けんさする|検査する|memeriksa/mengecek
+45|ちゅうしゃする|注射する|menyuntik
+45|レントゲンをとる|レントゲンを撮る|meronsen
+45|にゅういん／たいいんする|入院／退院する|opname/keluar dari rumah sakit
+45|しゅじゅつする|手術する|dioperasi
+45|ますいする|麻酔する|membius
+45|しょほうせん|処方箋|resep
+45|カルテ||data pasien
+45|ほけんしょう|保険証|kartu asuransi
+45|しんさつけん|診察券|kartu pasien
+45|くすりのしゅるい|薬の種類|jenis obat
+45|いたみどめ|痛み止め|analgesik
+45|しっぷやく|湿布薬|obat koyo
+45|げねつざい|解熱剤|penurun panas
+45|じょうざい|錠剤|pil
+45|こなぐすり|粉薬|puyer
+45|カプセル||kapsul
+46|わたします|渡します|menyerahkan
+46|かえってきます|帰って 来ます|pulang
+46|でます|出ます|[bus] berangkat
+46|とどきます|届きます|[barang] sampai
+46|にゅうがくします|入学します|masuk [universitas]
+46|そつぎょうします|卒業します|lulus/tamat [dari universitas]
+46|やきます|焼きます|membakar
+46|やけます|焼けます|[roti] dibakar
+46|やけます|焼けます|[daging] dibakar
+46|るす|留守|ketidakadaan
+46|たくはいびん|宅配便|titipan kilat
+46|げんいん|原因|sebab
+46|こちら||sini
+46|~のところ|~の 所|tempat ~
+46|はんとし|半年|setengah tahun
+46|ちょうど||pas
+46|たったいま|たった今|baru saja (memakai bersama bentuk lampa, menyatakan hal yang sudah selesai dilakukan)
+46|いまいいですか。|今 いいですか。|Sekarang boleh mengganggu?
+46|ガスサービスセンター||pusat pelayanan gas
+46|ガスレンジ||kompor gas
+46|ぐあい|具合|kondisi
+46|もうしわけありません。|申し訳ありません。|Maaf.
+46|どちらさまでしょうか。|どちら様でしょうか。|Atas nama siapa?
+46|おまたせしました。|お待たせしました。|Maaf lama menunggu.
+46|むかいます|向かいます|menuju
+46|ついています||mujur, untung
+46|ゆか|床|lantai
+46|ころびます|転びます|jatuh
+46|ベル||bel
+46|なります|鳴ります|berbunyi
+46|あわてて|慌てて|tergesa-gesa
+46|じゅんばんに|順番に|sesuai dengan urutan
+46|できごと|出来事|peristiwa
+46|カタカナごのルーツ|かたかな語のルーツ|asal-usul kata Katakana
+46|ふくしょく|服飾|busana
+46|いりょうかんけい|医療関係|bidang kedokteran
+46|げいじゅつ|芸術|seni
+46|そのた|その他|dan lain-lain
+46|えいご|英語|bahasa Inggris
+46|ジャム||selai (Inggris)
+46|ハム||ham (Inggris)
+46|クッキー||kue kering (Inggris)
+46|チーズ||keju (Inggris)
+46|エプロン||celemek (Inggris)
+46|スカート||rok (Inggris)
+46|スーツ||jas (Inggris)
+46|インフルエンザ||influenza (Inggris)
+46|ストレス||stres (Inggris)
+46|ドラマ||drama (Inggris)
+46|コーラス||paduan suara (Inggris)
+46|メロディー||melodi (Inggris)
+46|スケジュール||jadwal (Inggris)
+46|ティッシュペーパー||tisu (Inggris)
+46|トラブル||masalah (Inggris)
+46|レジャー||hiburan (Inggris)
+46|フランスご|フランス語|bahasa Prancis
+46|コロッケ||kroket (Prancis)
+46|オムレツ||telur dadar (Prancis)
+46|ズボン||celana (Prancis)
+46|ランジェリー||pakaian dalam (Prancis)
+46|バレエ||balet (Prancis)
+46|アトリエ||studio (Prancis)
+46|アンケート||angket (Prancis)
+46|コンクール||kompetisi (Prancis)
+46|ドイツご|ドイツ語|bahasa Jerman
+46|フランクフルト[ソーセージ]||sosis (Jerman)
+46|レントゲン||ronsen (Jerman)
+46|アレルギー||alergi (Jerman)
+46|メルヘン||cerita dongeng (Jerman)
+46|アルバイト||kerja paruh waktu (Jerman)
+46|エネルギー||energi (Jerman)
+46|テーマ||tema (Jerman)
+46|オランダご|オランダ語|bahasa Belanda
+46|ビール||bir (Belanda)
+46|コーヒー||kopi (Belanda)
+46|ホック||kancing hak (Belanda)
+46|ズック||sepatu karet/sepatu olahraga (Belanda)
+46|メス||pisau bedah (Belanda)
+46|ピンセット||penjepit (Belanda)
+46|オルゴール||kotak musik (Belanda)
+46|ゴム||karet (Belanda)
+46|ペンキ||cat (Belanda)
+46|ガラス||kaca (Belanda)
+46|ポルトガルご|ポルトガル語|bahasa Portugis
+46|パン||roti (Portugis)
+46|カステラ||kue bolu (Portugis)
+46|ビロード||beledu (Portugis)
+46|ボタン||kancing (Portugis)
+46|カルタ||kartu (Portugis)
+46|コップ||gelas (Portugis)
+46|イタリアご|イタリア語|bahasa Italia
+46|マカロニ||makaroni (Italia)
+46|パスタ||pasta (Italia)
+46|スパゲッティ||spageti (Italia)
+46|オペラ||opera (Italia)
+47|ふきます|吹きます|[angin] bertiup
+47|もえます|燃えます|[sampah] terbakar
+47|なくなります|亡くなります|meninggal dunia (kata yang tidak langsung untuk しにます)
+47|あつまります|集まります|[orang] berkumpul
+47|わかれます|別れます|[orang] berpisah
+47|します||dalam keadaan
+47||音／声が~|berbunyi/bersuara
+47||味が~|terasa
+47|||berbau
+47|きびしい|厳しい|keras, berat
+47|ひどい||kejam
+47|こわい|怖い|takut
+47|じっけん|実験|percobaan, eksperimen
+47|データ||data
+47|じんこう|人口|penduduk
+47|におい||bau
+47|かがく|科学|ilmu pengetahuan
+47|いがく|医学|ilmu kedokteran
+47|ぶんがく|文学|sastra
+47|パトカー||mobil patrol
+47|きゅうきゅうしゃ|救急車|mobil ambulan
+47|さんせい|賛成|persetujuan
+47|はんたい|反対|menentang
+47|だいとうりょう|大統領|Presiden
+47|~によると||menurut ~ (menyatakan sumber informasi)
+47|こんやくします|婚約します|bertunangan
+47|どうも||rupanya, sepertinya (dipakai ketika menyatakan dugaan)
+47|こいびと|恋人|pacar
+47|あいて|相手|pasangan
+47|しりあいます|知り合います|berkenalan
+47|けしょう|化粧|dandan (~を します: berdandan)
+47|せわをします|世話を します|menjaga, membantu
+47|じょせい|女性|wanita
+47|だんせい|男性|pria
+47|ながいき|長生き|panjang umur (~します: berumur panjang)
+47|りゆう|理由|alasan
+47|かんけい|関係|hubungan
+47|ぎおんご・ぎたいご|擬音語・擬態語|onomatope
+47|ザーザー(降る)||lebat (hujan)
+47|ピューピュー(吹く)||hyu hyu (angin)
+47|ゴロゴロ(鳴る)||grudug (petir)
+47|ワンワン(ほえる)||guk (menggonggong)
+47|ほえる||menggonggong
+47|ニャーニャー(鳴く)||meong (mengeong)
+47|カーカー(鳴く)||gak
+47|なく|鳴く|berbunyi, mengeong
+47|げらげら(笑う)||(tertawa) terbahak-bahak
+47|しくしく(泣く)||(menangis) tersedu-sedu, terisak-isak
+47|きょろきょろ(見る)||gelisah (melihat)
+47|ぱくぱく(食べる)||(makan) lahap
+47|ぐうぐう(寝る)||(tidur) pulas
+47|すらすら(読む)||(membaca) dengan lancar
+47|ざらざら(している)||(terasa) kasar
+47|べたべた(している)||(terasa) lengket
+47|つるつる(している)||(terasa) licin
+48|おろします|降ろします|menurunkan
+48|とどけます|届けます|mengantarkan
+48|せわをします|世話を します|menjaga, membantu
+48|ろくおんします|録音します|merekam
+48|いや|嫌|tidak senang, tidak suka
+48|じゅく|塾|les
+48|せいと|生徒|murid
+48|ファイル||map
+48|じゆうに|自由に|dengan bebas
+48|~かん|~間|selama ~
+48|いいことですね。||Bagus, ya.
+48|おいそがしいですか。|お忙しいですか。|Apakah sibuk? (dipakai ketika mengajak bicara kepada orang yang berpangkat tinggi)
+48|えいぎょう|営業|perdagangan
+48|それまでに||sebelumnya
+48|かまいません。||Tidak apa-apa.
+48|たのしみます|楽しみます|menikmati
+48|おや|親|orang tua
+48|しょうがくせい|小学生|murid SD
+48|~パーセント||－ persen
+48|そのつぎ|その 次|yang berikut
+48|しゅうじ|習字|kaligrafi
+48|ふつうの|普通の|biasa
+48|しつける・きたえる|しつける・鍛える|mendidik, disiplin
+48|こどもになにをさせますか。|子どもに何をさせますか。|Anda menyuruh membuat apa kepada anak?
+48|しぜんのなかであそぶ|自然の中で遊ぶ|bermain di tengah alam
+48|スポーツをする||berolahraga
+48|ひとりでりょこうする|一人で旅行する|berjalan-jalan sendirian
+48|いろいろなけいけんをする|いろいろな経験をする|mencari berbagai pengalaman
+48|いいほんをたくさんよむ|いい本をたくさん読む|membaca banyak buku yang bagus
+48|おとしよりのはなしをきく|お年寄りの話を聞く|mendengarkan cerita orang lanjut usia
+48|ボランティアにさんかする|ボランティアに参加する|mengikuti sekarelawan
+48|うちのしごとをてつだう|うちの仕事を手伝う|membantu urusan rumah tangga
+48|おとうとやいもうと、おじいちゃん、おばあちゃんのせわをする|弟や妹、おじいちゃん、おばあちゃんの世話をする|menjaga adik laki-laki, adik perempuan dan nenek
+48|じぶんがやりたいことをやる|自分がやりたいことをやる|membuat apa yang dia inginkan
+48|じぶんのことはじぶんできめる|自分のことは自分で決める|mengambil keputusan untuk dia sendiri
+48|じしんをもつ|自信を持つ|percaya diri
+48|せきにんをもつ|責任を持つ|bertanggung jawab
+48|がまんする|我慢する|sabar
+48|じゅくへいく|塾へ行く|pergi les
+48|ピアノやえいごをならう|ピアノや英語を習う|belajar bermain piano atau bahasa Inggris
+49|りようします|利用します|menggunakan
+49|つとめます|勤めます|bekerja [di perusahaan]
+49|かけます|掛けます|duduk [di kursi]
+49|すごします|過ごします|menghabiskan, melewatkan
+49|いらっしゃいます||ada, pergi, datang (kata hormat dari い ます, いきます, きます)
+49|めしあがります|召し上がります|makan, minum (kata hormat dari たべます, のみます)
+49|おっしゃいます||berkata (kata hormat dari いいます)
+49|なさいます||melakukan (kata hormat dari します)
+49|ごらんになります|ご覧に なります|melihat (kata hormat dari みます)
+49|ごぞんじです|ご存じです|mengetahui (kata hormat dari しって いま す)
+49|あいさつ||salam (~を します: memberi salam sepatah kata pada)
+49|りょかん|旅館|penginapan
+49|バスてい|バス停|halte
+49|おくさま|奥様|Nyonya (kata hormat dari おくさん, terhadap istri orang lain)
+49|~さま|~様|Kepada Yth. ~, Bapak ~, Ibu ~, Sdr. ~ (kata hormat dari ~さん)
+49|たまに||kadang-kadang
+49|どなたでも||siapa saja (kata hormat dari だれでも)
+49|~といいます||bernama ~
+49|~ねん－くみ|~年－組|kelas －
+49|だします|出します|menjadi [demam]
+49|よろしくお伝えください。||Tolong sampaikan salam saya.
+49|しつれいいたします。|失礼いたします。|Permisi. (kata merendahkan diri dari し つれいします)
+49|ひまわりしょうがっこう|ひまわり小学校|SD fiksi
+49|けいれき|経歴|riwayat hidup, CV
+49|いがくぶ|医学部|fakultas kedokteran
+49|めざします|目指します|menargetkan
+49|すすみます|進みます|lanjut kuliah di
+49|iPSさいぼう|iPS細胞|sel iPS
+49|かいはつします|開発します|mengembangkan
+49|マウス||tikus percobaan
+49|ヒト||manusia
+49|じゅしょうします|受賞します|meraih
+49|こうえんかい|講演会|seminar
+49|やまなかしんや|山中伸弥|ilmiawan di bidang kedokteran Jepang (1962-)
+49|ノーベルしょう|ノーベル賞|Penghargaan Nobel
+49|きせつのぎょうじ|季節の行事|acara musiman
+49|ぎょうじ|行事|acara
+49|きせつ|季節|musim
+49|おしょうがつ|お正月|Tahun baru
+49|まめまき|豆まき|upacara menghamburkan kacang
+49|せつぶん|節分|Setsubun (pembagian musim)
+49|ひなまつり|ひな祭り|Perayaan Boneka
+49|ひなにんぎょう|ひな人形|Hinaningyo (boneka untuk Perayaan Boneka)
+49|こどものひ|こどもの日|Hari Anak
+49|たなばた|七夕|Tanabata/Perayaan Bintang
+49|おぼん|お盆|Perayaan Bon
+49|おつきみ|お月見|Acara Melihat Bulan
+49|おおみそか|大みそか|Malam Tahun Baru
+49|おせち||Osechi (makanan khusus tahun baru)
+50|まいります|参ります|pergi, datang (kata merendahkan diri dari いきます, きます)
+50|おります||ada (kata merendahkan diri dari います)
+50|いただきます||makan, minum, menerima (kata merendahkan diri dari たべます, のみます, もらいます)
+50|もうします|申します|bernama (kata merendahkan diri dari いい ます)
+50|いたします||melakukan (kata merendahkan diri dari し ます)
+50|はいけんします|拝見します|melihat (kata merendahkan diri dari みま す)
+50|ぞんじます|存じます|mengenal (kata merendahkan diri dari し ります)
+50|うかがいます|伺います|bertanya, mendengar, berkunjung (kata merendahkan diri dari ききます, いきます)
+50|おめにかかります|お目に かかります|bertemu (kata merendahkan diri dari あい ます)
+50|いれます||membuat [kopi] (menyiram air panas dari membuat cairan)
+50|よういします|用意します|menyediakan
+50|わたくし|私|saya (kata merendahkan diri dari わたし)
+50|ガイド||pemandu
+50|メールアドレス||alamat e-mail
+50|スケジュール||jadwal
+50|さらいしゅう|再来週|dua minggu lagi
+50|さらいげつ|再来月|dua bulan lagi
+50|さらいねん|再来年|dua tahun lagi
+50|はじめに|初めに|pertama-tama
+50|えどとうきょうはくぶつかん|江戸東京博物館|Museum Edo Tokyo
+50|きんちょうします|緊張します|tegang
+50|しょうきん|賞金|hadiah uang
+50|きりん||jerapah
+50|ころ||ketika (contoh: ketika anak, ketika mahasiswa)
+50|かないます||[impian] terkabul
+50|おうえんします|応援します|mendukung
+50|こころから|心から|dari segenap hati
+50|かんしゃします|感謝します|berterima kasih
+50|おれい|お礼|ucapan terima kasih
+50|おげんきでいらっしゃいますか。|お元気で いらっしゃいますか。|Bagaimana kabarnya? (kata hormat dari お げんきですか)
+50|めいわくをかけます|迷惑を かけます|mengganggu
+50|いかします|生かします|menggunakan (contoh: menggunakan pengalaman)
+50|ミュンヘン||München (Jerman)
+50|ふうとう|封筒|amplop
+50|はがき||kartu pos
+50|ゆうびんはがき|郵便はがき|kartu pos (resmi pos)
+50|あてなのかきかた|あて名の書き方|cara menulis alamat penerima
+50|とうきょうと|東京都|Metropolis Tokyo (~都)
+50|おおさかふ|大阪府|Prefektur Osaka (~府)
+50|~く|~区|kecamatan/wilayah ~ (contoh: 千代田区)
+50|~ちょうめ|~丁目|blok ~
+50|~さま|~様|Kepada Yth. ~ (nama lengkap penerima dengan 様)
+50|せんせい|先生|guru (dipakai sebagai pengganti 様 bila menulis untuk guru sendiri)`.split('\n').map((l,i)=>{const[b,k,j,m]=l.split('|');return{id:i,b:+b,k,j,m}});
+
+const $=s=>document.querySelector(s);
+const MODES=[['i2j','Indonesia → Jepang','Lihat arti, pilih kata Jepangnya'],['j2i','Jepang → Indonesia','Lihat kata Jepang, pilih artinya'],['kr','Tebak bacaan kanji','Lihat kanji, pilih cara bacanya'],['mix','Campuran','Semua jenis soal diacak']];
+const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const disp=(w,r=true)=>w.j?(r?`<ruby>${w.j}<rt>${w.k}</rt></ruby>`:w.j):w.k;
+let sel=new Set([26]),mode='i2j',S;
+
+let rng={f:1,t:1e9};
+const pool=()=>D.filter(w=>sel.has(w.b));
+const K='mnn2stats',wk=w=>w.b+'|'+w.k;
+const ld=()=>{try{return JSON.parse(localStorage.getItem(K))||{}}catch(e){return{}}};
+const sv=o=>{try{localStorage.setItem(K,JSON.stringify(o))}catch(e){}};
+function rec(w,ok){const o=ld();o.a=(o.a||0)+1;o.g=(o.g||0)+(ok?1:0);
+ o.b=o.b||{};const b=o.b[w.b]=o.b[w.b]||[0,0];b[0]+=ok?1:0;b[1]++;
+ o.w=o.w||{};const x=o.w[wk(w)]=o.w[wk(w)]||[0,0];x[0]+=ok?0:1;x[1]++;sv(o)}
+function drawSetup(){
+ const bs=[...new Set(D.map(x=>x.b))],n=pool().length;
+ const nn=Math.max(n,1);rng.f=Math.max(1,Math.min(rng.f,nn));rng.t=Math.max(rng.f,Math.min(rng.t,nn));
+ $('#chips').innerHTML=`<button class="chip" data-a="all">Semua bab</button><button class="chip" data-a="none">Kosongkan</button>`+bs.map(b=>`<button class="chip ${sel.has(b)?'on':''}" data-b="${b}">Bab ${b}</button>`).join('');
+ let h=`<button class="chip ${rng.f==1&&rng.t==n?'on':''}" data-r="1-${n}">Semua</button>`;
+ for(let i=0;i<n;i+=10){const a=i+1,c=Math.min(i+10,n);h+=`<button class="chip ${rng.f==a&&rng.t==c?'on':''}" data-r="${a}-${c}">${a}–${c}</button>`}
+ $('#rchips').innerHTML=h;$('#rf').value=rng.f;$('#rt').value=rng.t;
+ $('#rinfo').textContent=n?`${rng.t-rng.f+1} kata dipilih dari ${n} kata (nomor berurutan sesuai bab yang dipilih)`:'Pilih minimal satu bab.';
+ $('#modes').innerHTML=MODES.map(m=>`<button class="mode ${mode==m[0]?'on':''}" data-m="${m[0]}">${m[1]}<small>${m[2]}</small></button>`).join('');
+ $('#start').disabled=!n;
+}
+const reset=()=>{rng={f:1,t:1e9}};
+$('#chips').onclick=e=>{const b=e.target.closest('button');if(!b)return;
+ if(b.dataset.a=='all')D.forEach(x=>sel.add(x.b));else if(b.dataset.a=='none')sel.clear();
+ else{const n=+b.dataset.b;sel.has(n)?sel.delete(n):sel.add(n)}
+ reset();drawSetup()};
+$('#rchips').onclick=e=>{const b=e.target.closest('[data-r]');if(!b)return;const[f,t]=b.dataset.r.split('-').map(Number);rng={f,t};drawSetup()};
+$('#rf').onchange=()=>{rng.f=+$('#rf').value||1;drawSetup()};
+$('#rt').onchange=()=>{rng.t=+$('#rt').value||1e9;drawSetup()};
+$('#modes').onclick=e=>{const b=e.target.closest('[data-m]');if(!b)return;mode=b.dataset.m;drawSetup()};
+$('#start').onclick=()=>{
+ let words=pool().slice(rng.f-1,rng.t);
+ if(mode=='kr')words=words.filter(w=>w.j);
+ if(words.length<4){alert('Kata terlalu sedikit untuk mode ini. Perlebar rentang atau pilih lebih banyak bab.');return}
+ begin(words);
+};
+const pc=(a,b)=>b?Math.floor(a/b*100):0;
+function drawStats(){
+ const o=ld(),a=o.a||0,ss=o.s||[],bs=Object.keys(o.b||{}).sort((x,y)=>x-y);
+ const avg=ss.length?Math.floor(ss.reduce((t,x)=>t+x.sc,0)/ss.length):0;
+ const hard=Object.entries(o.w||{}).filter(e=>e[1][0]>0).sort((x,y)=>y[1][0]/y[1][1]-x[1][0]/x[1][1]||y[1][0]-x[1][0]).slice(0,10);
+ const ML=Object.fromEntries(MODES.map(m=>[m[0],m[1]]));
+ $('#stbody').innerHTML=a?`<div class="card"><h2>Ringkasan</h2><div class="sg">
+ <div><b>${a}</b><span>kata dijawab</span></div><div><b>${pc(o.g,a)}%</b><span>benar di percobaan pertama</span></div>
+ <div><b>${ss.length}</b><span>sesi latihan</span></div><div><b>${avg}</b><span>rata-rata nilai sesi</span></div></div></div>
+ <div class="card"><h2>Akurasi per bab</h2>${bs.map(b=>{const[g,t]=o.b[b];return`<div class="sb"><div class="t"><span>Bab ${b}</span><span>${pc(g,t)}% · ${g}/${t}</span></div><div class="bar"><i style="width:${pc(g,t)}%"></i></div></div>`}).join('')}</div>
+ <div class="card"><h2>Kata tersulit</h2>${hard.length?`<ul class="wl">${hard.map(([k,v])=>{const w=D.find(x=>wk(x)==k);return w?`<li><span style="font-size:1.1rem">${disp(w)}<small style="color:var(--mute)"> · Bab ${w.b}</small></span><span>salah ${v[0]}× dari ${v[1]}</span></li>`:''}).join('')}</ul>`:'<p class="sub">Belum ada kata yang salah. Bagus.</p>'}</div>
+ <div class="card"><h2>Riwayat sesi terakhir</h2><ul class="wl">${[...ss].reverse().slice(0,10).map(x=>`<li><span>${new Date(x.t).toLocaleDateString('id-ID',{day:'numeric',month:'short'})} · ${ML[x.m]||''}</span><span><b>${x.sc}</b> (${x.g}/${x.n})</span></li>`).join('')}</ul></div>
+ <button class="btn ghost" id="rst">Hapus semua statistik</button>`:'<div class="card"><p class="sub" style="margin:0">Belum ada data. Selesaikan satu sesi latihan dulu, lalu statistik akan muncul di sini.</p></div>';
+ const r=$('#rst');if(r)r.onclick=()=>{if(confirm('Hapus semua statistik? Tidak bisa dikembalikan.')){sv({});drawStats()}};
+}
+$('#gostat').onclick=()=>{$('#setup').classList.add('hide');$('#stats').classList.remove('hide');drawStats()};
+$('#stback').onclick=()=>{$('#stats').classList.add('hide');$('#setup').classList.remove('hide')};
+
+function typeFor(w){
+ if(mode=='mix'){const t=['i2j','j2i'];if(w.j)t.push('kr');return t[Math.random()*t.length|0]}
+ return mode;
+}
+function begin(words){
+ S={mode,words,total:words.length,queue:sh(words).map(w=>({w,t:typeFor(w)})),first:{},done:0,tries:0,miss:new Set(),pool:D.filter(w=>sel.has(w.b))};
+ if(S.pool.length<8)S.pool=D;
+ ['#setup','#result'].forEach(s=>$(s).classList.add('hide'));$('#quiz').classList.remove('hide');
+ ask();
+}
+function ask(){
+ if(!S.queue.length)return finish();
+ const it=S.cur=S.queue.shift(),w=it.w,t=it.t;S.locked=false;
+ let key,label,promptH,correct,others;
+ if(t=='i2j'){label='Apa bahasa Jepangnya?';promptH=`<div class="mean">${w.m}</div>`;key=x=>x.k+x.j;correct=disp(w);others=x=>disp(x)}
+ else if(t=='j2i'){label='Apa artinya?';promptH=`<div class="big">${disp(w)}</div>`;key=x=>x.m;correct=w.m;others=x=>x.m}
+ else{label='Bagaimana cara membaca kanji ini?';promptH=`<div class="big" style="line-height:1.4">${w.j}</div>`;key=x=>x.k;correct=w.k;others=x=>x.k}
+ const cand=sh(S.pool.filter(x=>x.id!=w.id&&key(x)!=key(w)&&(t!='kr'||x.j)&&others(x)!=correct));
+ const seen=new Set([correct]),ds=[];
+ for(const x of cand){const o=others(x);if(!seen.has(o)){seen.add(o);ds.push(o)}if(ds.length==3)break}
+ S.opts=sh([{h:correct,ok:1},...ds.map(h=>({h}))]);
+ $('#q').innerHTML=`<div class="lab">${label}</div>${promptH}`;
+ $('#opts').innerHTML=S.opts.map((o,i)=>`<button class="opt" data-i="${i}"><b>${i+1}</b><span>${o.h}</span></button>`).join('');
+ $('#fb').innerHTML='';$('#next').classList.add('hide');
+ $('#pb').style.width=S.done/S.total*100+'%';
+ $('#pt').textContent=`Selesai ${S.done} / ${S.total}`;
+ $('#pk').textContent=S.queue.length+1+' soal tersisa';
+}
+function pick(i){
+ if(S.locked)return;S.locked=true;
+ const it=S.cur,w=it.w,ok=!!S.opts[i].ok;
+ document.querySelectorAll('.opt').forEach((b,j)=>{b.disabled=true;if(S.opts[j].ok)b.classList.add('ok');else if(j==i)b.classList.add('no')});
+ S.tries++;
+ if(!(w.id in S.first)){S.first[w.id]=ok;rec(w,ok)}
+ const full=`${disp(w)} = ${w.m}`;
+ if(ok){S.done++;$('#fb').innerHTML=`<div class="fb ok">Benar. ${full}</div>`}
+ else{S.miss.add(w.id);const at=Math.min(S.queue.length,3+(Math.random()*3|0));S.queue.splice(at,0,{w,t:typeFor(w)});
+  $('#fb').innerHTML=`<div class="fb no">Belum tepat. ${full}<br><small>Kata ini akan muncul lagi.</small></div>`}
+ $('#pb').style.width=S.done/S.total*100+'%';
+ const n=$('#next');n.classList.remove('hide');n.focus();
+}
+$('#opts').onclick=e=>{const b=e.target.closest('.opt');if(b)pick(+b.dataset.i)};
+$('#next').onclick=ask;
+$('#back').onclick=()=>{if(S&&S.done>0&&!confirm('Keluar dari latihan? Progres sesi ini akan hilang.'))return;$('#quiz').classList.add('hide');$('#setup').classList.remove('hide');drawSetup()};
+document.addEventListener('keydown',e=>{if($('#quiz').classList.contains('hide'))return;
+ if(!S.locked&&/^[1-4]$/.test(e.key)&&S.opts[e.key-1])pick(e.key-1);
+ else if(S.locked&&e.key=='Enter'){e.preventDefault();ask()}});
+
+function finish(){
+ $('#quiz').classList.add('hide');const r=$('#result');r.classList.remove('hide');
+ const good=Object.values(S.first).filter(Boolean).length,score=Math.floor(good/S.total*100);
+ {const o=ld();o.s=(o.s||[]).concat({t:Date.now(),sc:score,n:S.total,g:good,m:S.mode}).slice(-30);sv(o)}
+ const weak=S.words.filter(w=>S.miss.has(w.id));
+ const msg=score>=90?'Sangat baik, tinggal dijaga.':score>=75?'Bagus, masih ada beberapa yang perlu diulang.':score>=55?'Cukup. Banyak kata yang belum menempel.':score>=35?'Masih kurang. Ulangi kata yang salah dulu.':'Belum menguasai. Tidak apa-apa, ulangi pelan-pelan.';
+ r.innerHTML=`<div class="card"><div class="score"><div class="donut"><svg viewBox="0 0 120 120" role="img" aria-label="${score}% benar"><circle cx="60" cy="60" r="50" fill="none" stroke="var(--bg2)" stroke-width="14"/><circle cx="60" cy="60" r="50" fill="none" stroke="var(--ok)" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="${score} 100" transform="rotate(-90 60 60)"/></svg><div class="n">${score}%</div></div>
+ <p>${good} dari ${S.total} kata benar di percobaan pertama</p><p>${msg}</p>
+ <p style="font-size:.85rem">Total jawaban: ${S.tries}. Nilai hanya menghitung jawaban pertama, jadi pengulangan tidak menaikkan nilai.</p></div></div>
+ ${weak.length?`<div class="card"><h2>Kata yang belum dimengerti (${weak.length})</h2><ul class="wl">${weak.map(w=>`<li><span style="font-size:1.15rem">${disp(w)}</span><span>${w.m}</span></li>`).join('')}</ul></div>
+ <button class="btn" id="redo">Ulangi kata yang belum dimengerti</button>`:'<div class="card">Tidak ada kata yang salah. Semua benar di percobaan pertama.</div>'}
+ <button class="btn ghost" id="again">Kembali ke menu</button>`;
+ const rd=$('#redo');if(rd)rd.onclick=()=>begin(weak);
+ $('#again').onclick=()=>{r.classList.add('hide');$('#setup').classList.remove('hide');drawSetup()};
+}
+$('#tg').onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme=='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=dark?'light':'dark';};
+drawSetup();
+</script>
+</body>
+</html>
